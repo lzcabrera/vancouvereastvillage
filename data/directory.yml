@@ -1,0 +1,132 @@
+---
+google_map:
+  options:
+    internal:
+      id: map
+    provider:
+      streetViewControl: false
+      panControl: false
+      zoomControlOptions: 
+      styles:
+      - featureType: road
+        elementType: geometry
+        stylers:
+        - lightness: 100
+        - visibility: simplified
+      - featureType: road
+        elementType: labels
+        stylers:
+        - visibility: false
+      - featureType: poi
+        stylers:
+        - visibility: false
+      - featureType: poi
+        elementType: labels.text
+        stylers:
+        - visibility: false
+      - featureType: transit
+        stylers:
+        - visibility: false
+locations:
+- name: Black Rook Bakehouse
+  address: 2474 East Hastings St.
+  phone: 604-563-5094
+  website: http://www.blackrookbakehouse.com/
+  lat: 49.2811524
+  lng: -123.0552038
+- name: Scandilicious Dockside
+  address: 25 Victoria Drive
+  website: http://www.scandilicious.com/
+  lat: 32.260364
+  lng: -80.807558
+- name: East Village Bakery
+  address: 2166 East Hastings St.
+  phone: 604-568-5600
+  website: http://www.eastvillagebakery.com/
+  lat: 49.28118320000001
+  lng: -123.0602248
+- name: Salteñas
+  address: 2261 East Hastings St.
+  phone: 604-253-0004
+  website: https://www.facebook.com/saltenas.rocio
+  lat: 49.2812965
+  lng: -123.0587826
+- name: Italia Bakery
+  address: 2828 East Hastings St.
+  phone: 604-251-6800
+  website: http://www.italiabakery.ca/
+  lat: 49.2811348
+  lng: -123.046537
+- name: Coffeecino
+  address: 2550 East Hastings St.
+  lat: 49.2811455
+  lng: -123.0532587
+- name: Bianca Maria Italian Fine Foods
+  address: 2469 East Hastings St.
+  phone: 604-253-9626
+  lat: 49.28117659999999
+  lng: -123.0552455
+- name: Renzullo Food Market
+  address: 1370 Nanaimo St.
+  phone: 604-255-9655
+  website: http://renzullofoodmarket.com/
+  lat: 49.2726406
+  lng: -123.0565771
+- name: Rio Friendly Meats
+  address: 2477 East Hastings St.
+  phone: 604-253-0345
+  website: http://riofriendlymeats.webs.com/
+  lat: 49.2811761
+  lng: -123.0551177
+- name: Continental Sausage
+  address: 1927 East Hastings St.
+  phone: 604-255-6922
+  website: http://www.freybe.com/
+  lat: 49.281347
+  lng: -123.064945
+- name: Habit Natural Health
+  address: 2307 East Hastings St.
+  phone: 604-563-8822
+  lat: 49.281195
+  lng: -123.0577659
+- name: Pallet Coffee Roasters
+  address: 23 Semlin Drive
+  website: http://www.palletcoffeeroasters.com/
+  lat: 49.28469500000001
+  lng: -123.0635886
+- name: Jackalopes Neighbourhood Dive
+  address: 2257 East Hastings St.
+  website: http://jackalopevancouver.com/
+  lat: 49.2812947
+  lng: -123.0589523
+- name: Basho Cafe and Sweets
+  address: 2007 East Hastings St.
+  lat: 49.2813279
+  lng: -123.0633789
+- name: Renfrew Cafe
+  address: 826 Renfrew St.
+  lat: 40.4635793
+  lng: -79.90731269999999
+- name: The Brighton
+  address: 2471 East Hastings St.
+  phone: "(604) 428-8822"
+  website: https://www.facebook.com/BrightonRestaurant
+  lat: 49.2812645
+  lng: -123.0551954
+- name: Platform 7 Coffee
+  address: 2331 East Hastings St.
+  phone: 604-428-1455
+  website: http://platform7coffee.com/
+  lat: 49.2811905
+  lng: -123.0574196
+- name: Odd Society Spirits
+  address: 1725 Powell St.
+  phone: 604-716-6745
+  website: http://www.oddsocietyspirits.com/wordpress/spirits/
+  lat: 37.8381355
+  lng: -122.2959964
+- name: East Cafe
+  address: 2401 East Hastings St.
+  website: www.eastcafe.ca
+  lat: 49.2812663
+  lng: -123.0563085
