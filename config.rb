@@ -1,5 +1,6 @@
 Dir['./lib/*'].each { |f| require f }
 
+page 'index.html', proxy: 'directory.html'
 page '404.html', directory_index: false
 
 ###
