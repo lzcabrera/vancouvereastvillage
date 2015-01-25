@@ -8,6 +8,7 @@
   var markerLocations = [];
   var filteredLocations = [];
   var meetupList = $('.list a');
+  var defaultCoord = {lat: 49.282982, lng: -123.056554};
   var categoryList = $('.categories > ul');
 
   var generateMarkerData = function(element) {
@@ -34,7 +35,7 @@
   }
 
   var defaultLocation = function() {
-    var latlng = new google.maps.LatLng(49.282982, -123.056554);
+    var latlng = new google.maps.LatLng(defaultCoord.lat, defaultCoord.lng);
 
     handler.buildMap(mapOptions, function() {
       handler.map.centerOn(latlng);
@@ -43,7 +44,7 @@
   }
 
   var setZoomBasedOnLatitudePosition = function (latitudePosition) {
-    if(latitudePosition != 49.281169){
+    if(latitudePosition != defaultCoord.lat){
       handler.getMap().setZoom(16);
     }else{
       handler.getMap().setZoom(14);
