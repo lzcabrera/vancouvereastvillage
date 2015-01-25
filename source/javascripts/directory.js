@@ -10,6 +10,7 @@
   var filteredLocations = [];
   var meetupList = $('.list a');
   var defaultCoord = {lat: 49.282982, lng: -123.056554};
+  var defaultLatLng = new google.maps.LatLng(defaultCoord.lat, defaultCoord.lng);
   var categoryList = $('.categories > ul');
   var markerIcon = {
     "url": '/images/directory/map-pin.png',
@@ -35,10 +36,8 @@
   }
 
   var setDefaultLocation = function() {
-    var latlng = new google.maps.LatLng(defaultCoord.lat, defaultCoord.lng);
-
     handler.buildMap(mapOptions, function() {
-      handler.map.centerOn(latlng);
+      handler.map.centerOn(defaultLatLng);
       handler.getMap().setZoom(14);
     });
   }
@@ -135,6 +134,9 @@
 
     cleanMap(markerLocations);
     buildMap(filteredLocations);
+
+    handler.map.centerOn(defaultLatLng);
+    handler.getMap().setZoom(16);
 
   }
 
