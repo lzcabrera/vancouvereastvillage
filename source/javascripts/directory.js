@@ -34,7 +34,7 @@
 
   }
 
-  var defaultLocation = function() {
+  var setDefaultLocation = function() {
     var latlng = new google.maps.LatLng(defaultCoord.lat, defaultCoord.lng);
 
     handler.buildMap(mapOptions, function() {
@@ -51,7 +51,7 @@
     }
   }
 
-  var success = function(pos) {
+  var setGeolocation = function(pos) {
     var crd = pos.coords;
     var latlng = new google.maps.LatLng(crd.latitude, crd.longitude);
     handler.map.centerOn(latlng);
@@ -154,8 +154,8 @@
   mapOptions.provider.zoomControlOptions = google.maps.ZoomControlStyle.SMALL;
 
 
-  defaultLocation();
-  navigator.geolocation.getCurrentPosition(success);
+  setDefaultLocation();
+  navigator.geolocation.getCurrentPosition(setGeolocation);
   _.each(locations,generateMarkerData);
   handler.buildMap(mapOptions, function() {
     drawMap();
