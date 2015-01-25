@@ -6,7 +6,7 @@ google_map:
     provider:
       streetViewControl: false
       panControl: false
-      zoomControlOptions: 
+      zoomControlOptions:
       styles:
       - featureType: road
         elementType: geometry
@@ -27,6 +27,32 @@ google_map:
       - featureType: transit
         stylers:
         - visibility: false
+navigation:
+  categories:
+    - name: Eat
+      subcategories:
+        - name: Bakeries
+        - name: Delis
+        - name: Restaurants
+        - name: Brunch
+        - name: Dinner
+        - name: Gluten-free
+        - name: Sandwiches
+    - name: Drinks
+      subcategories:
+        - name: Bars
+        - name: Breweries
+        - name: Cafe
+        - name: Tea Shops
+    - name: Shop
+      subcategories:
+        - name: Artisan
+        - name: Antiques
+        - name: Art
+    - name: Services
+      subcategories:
+        - name: Realtors
+        - name: Agents
 locations:
 - name: Black Rook Bakehouse
   address: 2474 East Hastings St.
@@ -34,23 +60,44 @@ locations:
   website: http://www.blackrookbakehouse.com/
   lat: 49.2811524
   lng: -123.0552038
+  category:
+    name: Eat
+    subcategories:
+      name: Bakeries
 - name: Scandilicious Dockside
   address: 25 Victoria Drive
   website: http://www.scandilicious.com/
-  lat: 32.260364
-  lng: -80.807558
+  lat: 49.2844445
+  lng: -123.0655419
+  category:
+    name: Eat
+    subcategories:
+      name: Bakeries
+      name: Brunch
+      name: Dinner
 - name: East Village Bakery
   address: 2166 East Hastings St.
   phone: 604-568-5600
   website: http://www.eastvillagebakery.com/
   lat: 49.28118320000001
   lng: -123.0602248
+  category:
+    name: Eat
+    subcategories:
+      name: Bakeries
+      name: Gluten-free
 - name: Salteñas
   address: 2261 East Hastings St.
   phone: 604-253-0004
   website: https://www.facebook.com/saltenas.rocio
   lat: 49.2812965
   lng: -123.0587826
+  category:
+    name: Eat
+    subcategories:
+      name: Bakeries
+      name: Sandwiches
+      name: Lunch
 - name: Italia Bakery
   address: 2828 East Hastings St.
   phone: 604-251-6800
@@ -66,12 +113,6 @@ locations:
   phone: 604-253-9626
   lat: 49.28117659999999
   lng: -123.0552455
-- name: Renzullo Food Market
-  address: 1370 Nanaimo St.
-  phone: 604-255-9655
-  website: http://renzullofoodmarket.com/
-  lat: 49.2726406
-  lng: -123.0565771
 - name: Rio Friendly Meats
   address: 2477 East Hastings St.
   phone: 604-253-0345
@@ -105,11 +146,11 @@ locations:
   lng: -123.0633789
 - name: Renfrew Cafe
   address: 826 Renfrew St.
-  lat: 40.4635793
-  lng: -79.90731269999999
+  lat: 49.2770139
+  lng: -123.0438715
 - name: The Brighton
   address: 2471 East Hastings St.
-  phone: "(604) 428-8822"
+  phone: 604-428-8822
   website: https://www.facebook.com/BrightonRestaurant
   lat: 49.2812645
   lng: -123.0551954
@@ -123,10 +164,11 @@ locations:
   address: 1725 Powell St.
   phone: 604-716-6745
   website: http://www.oddsocietyspirits.com/wordpress/spirits/
-  lat: 37.8381355
-  lng: -122.2959964
+  lat: 49.2840736
+  lng: -123.0696796
 - name: East Cafe
   address: 2401 East Hastings St.
   website: www.eastcafe.ca
+  phone: 604-559-6400
   lat: 49.2812663
   lng: -123.0563085
