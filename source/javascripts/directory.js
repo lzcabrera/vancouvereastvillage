@@ -1,36 +1,15 @@
 (function() {
 
-  var handler = Gmaps.build('Google', {
-                  markers: {
-                    clusterer: {
-                      minimumClusterSize: 4,
-                      enableRetinaIcons: true,
-                      styles: [
-                        {
-                          textSize: 12,
-                          textColor: '#FFF',
-                          url: '/images/directory/map-cluster-1.png',
-                          height: 28,
-                          width: 28
-                        }, {
-                          textSize: 15,
-                          textColor: '#FFF',
-                          url: '/images/directory/map-cluster-2.png',
-                          height: 36,
-                          width: 36
-                        }
-                      ]
-                    }
-                  }
-                });
+  var handler = Gmaps.build('Google');
   var mapOptions = $('meta[name=mapOptions]').attr('content');
   var locations = $('meta[name=locations]').attr('content');
+  var categories = $('meta[name=categories]').attr('content');
 
   var markerLocations = [];
   var meetupList = $('.list a');
+  var categoryList = $('.categories > ul');
 
   var generateMarkerData = function(element) {
-    console.log(element.name);
 
     var markerIcon = {
         "url": '/images/directory/map-pin.png',
@@ -54,19 +33,19 @@
   }
 
   var defaultLocation = function() {
-    var latlng = new google.maps.LatLng(3, -13);
+    var latlng = new google.maps.LatLng(49.282982, -123.056554);
 
     handler.buildMap(mapOptions, function() {
       handler.map.centerOn(latlng);
-      handler.getMap().setZoom(2);
+      handler.getMap().setZoom(14);
     });
   }
 
   var setZoomBasedOnLatitudePosition = function (latitudePosition) {
-    if(latitudePosition != 3){
-      handler.getMap().setZoom(8);
+    if(latitudePosition != 49.281169){
+      handler.getMap().setZoom(16);
     }else{
-      handler.getMap().setZoom(2);
+      handler.getMap().setZoom(14);
     }
   }
 
@@ -87,7 +66,7 @@
         meetupList.removeClass('active');
         $(this).addClass("active");
         e.preventDefault();
-        handler.getMap().setZoom(14);
+        handler.getMap().setZoom(16);
         json.marker.setMap(handler.getMap()); //because clusterer removes map property from marker
         json.marker.panTo();
         google.maps.event.trigger(json.marker.getServiceObject(), 'click');
@@ -100,7 +79,7 @@
       google.maps.event.addListener(json.marker.getServiceObject(), 'click', function(){
         meetupList.removeClass('active');
         currentMarker.addClass("active");
-        handler.getMap().setZoom(14);
+        handler.getMap().setZoom(20);
       });
     });
   }
@@ -126,19 +105,41 @@
     });
     handler.map.centerOn(marker);
     handler.bounds.extendWith(marker);
-    handler.getMap().setZoom(8);
+    handler.getMap().setZoom(18);
+  }
+
+  var generateCategoriesList = function(element) {
+    categoryList.append("<li><a href='#'>"+element.name+"</a>");
+  }
+
+  var generateCategories = function() {
+    _.each(categories, generateCategoriesList);
   }
 
   mapOptions = JSON.parse(mapOptions);
-  mapOptions.provider.zoomControlOptions = google.maps.ZoomControlStyle.SMALL;
   locations = JSON.parse(locations);
 
+  var mappedLocations = []
+
+  _.each(locations, function(business){
+    if ((typeof(business.category) !== 'undefined') && (business.category !== null)) {
+      if(business.category.name == "Eat") {
+        mappedLocations.push(business);
+      }
+    }
+  });
+
+  console.log('mappedLocations '+mappedLocations.length);
+
+  categories = JSON.parse(categories);
+  mapOptions.provider.zoomControlOptions = google.maps.ZoomControlStyle.SMALL;
+
+
   defaultLocation();
+  generateCategories();
   navigator.geolocation.getCurrentPosition(success);
 
-  // console.log(locations);
   _.each(locations,generateMarkerData);
-  //locations.forEach(generateMarkerData);
 
   handler.buildMap(mapOptions, function() {
     drawMap();
