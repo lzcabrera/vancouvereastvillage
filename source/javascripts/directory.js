@@ -6,6 +6,7 @@
   var categories = $('meta[name=categories]').attr('content');
 
   var markerLocations = [];
+  var filteredLocations = [];
   var meetupList = $('.list a');
   var categoryList = $('.categories > ul');
 
@@ -109,42 +110,57 @@
   }
 
   var generateCategoriesList = function(element) {
-    categoryList.append("<li><a href='#'>"+element.name+"</a>");
+    var link = $("<a />", {html: element.name, href: '#'});//.on('click', filterCategories(element.name));
+    var listItem = $("<li />").append(link);
+    categoryList.append(listItem);
+    console.log('e '+element.name);
+    link.on('click', filterCategories(element.name));
   }
 
   var generateCategories = function() {
+    console.log('categories '+categories.length);
+    console.dir(categories);
     _.each(categories, generateCategoriesList);
+  }
+
+  var filterCategories = function(categoryFilter){
+
+    var filteredLocations = _.filter(markerLocations, function(item){
+      if ((typeof(item.category) !== 'undefined') && (item.category !== null)) {
+        return item.category.name == categoryFilter;
+      }
+    });
+
+    markerLocations = filteredLocations;
+    console.log('filteredLocations '+filteredLocations.length);
+    handler.buildMap(mapOptions, function() {
+      drawMap();
+    });
+
+  }
+
+  var clearMarkers = function() {
+    setMapMarkers(null);
+  }
+
+  var setMapMarkers = function() {
+
   }
 
   mapOptions = JSON.parse(mapOptions);
   locations = JSON.parse(locations);
-
-  var mappedLocations = []
-
-  _.each(locations, function(business){
-    if ((typeof(business.category) !== 'undefined') && (business.category !== null)) {
-      if(business.category.name == "Eat") {
-        mappedLocations.push(business);
-      }
-    }
-  });
-
-  console.log('mappedLocations '+mappedLocations.length);
-
   categories = JSON.parse(categories);
   mapOptions.provider.zoomControlOptions = google.maps.ZoomControlStyle.SMALL;
 
 
   defaultLocation();
-  generateCategories();
   navigator.geolocation.getCurrentPosition(success);
-
   _.each(locations,generateMarkerData);
-
   handler.buildMap(mapOptions, function() {
     drawMap();
   });
 
+  //generateCategories();
 
 
 })();
