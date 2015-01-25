@@ -1,6 +1,7 @@
 (function() {
 
   var handler = Gmaps.build('Google');
+  // console.dir(handler);
   var mapOptions = $('meta[name=mapOptions]').attr('content');
   var locations = $('meta[name=locations]').attr('content');
   var categories = $('meta[name=categories]').attr('content');
@@ -10,14 +11,13 @@
   var meetupList = $('.list a');
   var defaultCoord = {lat: 49.282982, lng: -123.056554};
   var categoryList = $('.categories > ul');
+  var markerIcon = {
+    "url": '/images/directory/map-pin.png',
+    "width": 33,
+    "height": 39
+  };
 
   var generateMarkerData = function(element) {
-
-    var markerIcon = {
-        "url": '/images/directory/map-pin.png',
-        "width": 33,
-        "height": 39
-    };
 
     var orgMarkup = "";
 
@@ -86,18 +86,22 @@
     });
   }
 
-  var drawMap = function() {
-    var markers = handler.addMarkers(markerLocations);
+  var drawMap = function(points) {
+    var markers = handler.addMarkers(points);
 
-    _.each(markerLocations, function(json, index){
+    _.each(points, function(json, index){
       json.marker = markers[index];
     });
 
-    bindLiToMarker(markerLocations);
+    // bindLiToMarker(markerLocations);
 
     handler.bounds.extendWith(markers);
 
-    setZoomBasedOnLatitudePosition(handler.getMap().getCenter().k);
+    // setZoomBasedOnLatitudePosition(handler.getMap().getCenter().k);
+  }
+
+  var cleanMap = function(points) {
+    handler.removeMarkers();
   }
 
   var zoomToPosition = function(position) {
@@ -111,16 +115,13 @@
   }
 
   var generateCategoriesList = function(element) {
-    var link = $("<a />", {html: element.name, href: '#'});//.on('click', filterCategories(element.name));
+    var link = $("<a />", {html: element.name, href: '#'});
     var listItem = $("<li />").append(link);
     categoryList.append(listItem);
-    console.log('e '+element.name);
-    link.on('click', filterCategories(element.name));
+    link.on('click', function(e){e.preventDefault();filterCategories(element.name)});
   }
 
   var generateCategories = function() {
-    console.log('categories '+categories.length);
-    console.dir(categories);
     _.each(categories, generateCategoriesList);
   }
 
@@ -132,20 +133,15 @@
       }
     });
 
-    markerLocations = filteredLocations;
-    console.log('filteredLocations '+filteredLocations.length);
+    cleanMap(markerLocations);
+    buildMap(filteredLocations);
+
+  }
+
+  var buildMap = function(points) {
     handler.buildMap(mapOptions, function() {
-      drawMap();
+      drawMap(points);
     });
-
-  }
-
-  var clearMarkers = function() {
-    setMapMarkers(null);
-  }
-
-  var setMapMarkers = function() {
-
   }
 
   mapOptions = JSON.parse(mapOptions);
@@ -156,12 +152,12 @@
 
   setDefaultLocation();
   navigator.geolocation.getCurrentPosition(setGeolocation);
-  _.each(locations,generateMarkerData);
-  handler.buildMap(mapOptions, function() {
-    drawMap();
-  });
 
-  //generateCategories();
+  // map all locations on page load
+  _.each(locations,generateMarkerData);
+  buildMap(markerLocations);
+
+  generateCategories();
 
 
 })();
