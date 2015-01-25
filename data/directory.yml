@@ -104,62 +104,86 @@ locations:
   website: http://www.italiabakery.ca/
   lat: 49.2811348
   lng: -123.046537
+  category:
+    name: Eat
 - name: Coffeecino
   address: 2550 East Hastings St.
   lat: 49.2811455
   lng: -123.0532587
+  category:
+    name: Drink
 - name: Bianca Maria Italian Fine Foods
   address: 2469 East Hastings St.
   phone: 604-253-9626
   lat: 49.28117659999999
   lng: -123.0552455
+  category:
+    name: Shop
 - name: Rio Friendly Meats
   address: 2477 East Hastings St.
   phone: 604-253-0345
   website: http://riofriendlymeats.webs.com/
   lat: 49.2811761
   lng: -123.0551177
+  category:
+    name: Shop
 - name: Continental Sausage
   address: 1927 East Hastings St.
   phone: 604-255-6922
   website: http://www.freybe.com/
   lat: 49.281347
   lng: -123.064945
+  category:
+    name: Shop
 - name: Habit Natural Health
   address: 2307 East Hastings St.
   phone: 604-563-8822
   lat: 49.281195
   lng: -123.0577659
+  category:
+    name: Shop
 - name: Pallet Coffee Roasters
   address: 23 Semlin Drive
   website: http://www.palletcoffeeroasters.com/
   lat: 49.28469500000001
   lng: -123.0635886
+  category:
+    name: Drink
 - name: Jackalopes Neighbourhood Dive
   address: 2257 East Hastings St.
   website: http://jackalopevancouver.com/
   lat: 49.2812947
   lng: -123.0589523
+  category:
+    name: Drink
 - name: Basho Cafe and Sweets
   address: 2007 East Hastings St.
   lat: 49.2813279
   lng: -123.0633789
+  category:
+    name: Drink
 - name: Renfrew Cafe
   address: 826 Renfrew St.
   lat: 49.2770139
   lng: -123.0438715
+  category:
+    name: Drink
 - name: The Brighton
   address: 2471 East Hastings St.
   phone: 604-428-8822
   website: https://www.facebook.com/BrightonRestaurant
   lat: 49.2812645
   lng: -123.0551954
+  category:
+    name: Drink
 - name: Platform 7 Coffee
   address: 2331 East Hastings St.
   phone: 604-428-1455
   website: http://platform7coffee.com/
   lat: 49.2811905
   lng: -123.0574196
+  category:
+    name: Drink
 - name: Odd Society Spirits
   address: 1725 Powell St.
   phone: 604-716-6745
