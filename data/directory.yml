@@ -38,7 +38,7 @@ navigation:
         - name: Dinner
         - name: Gluten-free
         - name: Sandwiches
-    - name: Drinks
+    - name: Drink
       subcategories:
         - name: Bars
         - name: Breweries
@@ -166,9 +166,13 @@ locations:
   website: http://www.oddsocietyspirits.com/wordpress/spirits/
   lat: 49.2840736
   lng: -123.0696796
+  category:
+    name: Drink
 - name: East Cafe
   address: 2401 East Hastings St.
   website: www.eastcafe.ca
   phone: 604-559-6400
   lat: 49.2812663
   lng: -123.0563085
+  category:
+    name: Drink
