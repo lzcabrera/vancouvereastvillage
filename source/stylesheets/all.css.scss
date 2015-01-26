@@ -124,7 +124,11 @@ footer {
     font-size: 2em;
   }
 
+}
+
+@media (max-width: 720px) {
   #map {
     padding-bottom: 75%;
   }
 }
+
