@@ -11,7 +11,7 @@
   var meetupList = $('.list a');
   var defaultCoord = {lat: 49.282982, lng: -123.056554};
   var defaultLatLng = new google.maps.LatLng(defaultCoord.lat, defaultCoord.lng);
-  var categoryList = $('.categories > ul');
+  var categoryList = $('.js-menu > ul');
   var markerIcon = {
     "url": '/images/directory/map-pin.png',
     "width": 33,
@@ -117,7 +117,10 @@
     var link = $("<a />", {html: element.name, href: '#'});
     var listItem = $("<li />").append(link);
     categoryList.append(listItem);
-    link.on('click', function(e){e.preventDefault();filterCategories(element.name)});
+    link.on('click', function(e){
+      filterCategories(element.name);
+      $('.js-menu-screen').trigger('click');
+    });
   }
 
   var generateCategories = function() {
