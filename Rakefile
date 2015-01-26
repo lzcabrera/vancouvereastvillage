@@ -1,5 +1,6 @@
 require 'yaml'
 require './lib/directory'
+require 'middleman-gh-pages'
 
 
 def geocode_address(update_all)
