@@ -162,6 +162,12 @@
   _.each(locations,generateMarkerData);
   buildMap(markerLocations);
 
+  google.maps.event.addDomListener(window, "resize", function() {
+     var center = handler.getMap().getCenter();
+     google.maps.event.trigger(handler.getMap(), "resize");
+     handler.getMap().setCenter(center);
+  });
+
   generateCategories();
 
 
