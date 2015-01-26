@@ -13,7 +13,7 @@
   var defaultLatLng = new google.maps.LatLng(defaultCoord.lat, defaultCoord.lng);
   var categoryList = $('.js-menu > ul');
   var markerIcon = {
-    "url": '/images/directory/map-pin.png',
+    "url": 'images/directory/map-pin.png',
     "width": 33,
     "height": 39
   };
