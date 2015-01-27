@@ -12,6 +12,7 @@
   var defaultCoord = {lat: 49.282982, lng: -123.056554};
   var defaultLatLng = new google.maps.LatLng(defaultCoord.lat, defaultCoord.lng);
   var categoryList = $('.js-menu > ul');
+  var cardsWrapper = $('.cards');
   var markerIcon = {
     "url": 'images/directory/map-pin.png',
     "width": 33,
@@ -85,14 +86,25 @@
     });
   }
 
+  var createCard = function(point){
+
+    var card = $("<div />", {class: "card"});
+    var cardHeader = $("<div />", {class: "card-header", html: point.name});
+    var phone = $("<p />", {html: point.phone});
+    var cardCopy = $("<div />", {class: "card-copy", html: point.address}).append(phone);
+    cardImage.append(image);
+    card.append(cardHeader).append(cardCopy);
+    cardsWrapper.append(card);
+  }
+
   var drawMap = function(points) {
     var markers = handler.addMarkers(points);
 
     _.each(points, function(json, index){
       json.marker = markers[index];
-    });
 
-    // bindLiToMarker(markerLocations);
+      createCard(json);
+    });
 
     handler.bounds.extendWith(markers);
 
@@ -101,6 +113,7 @@
 
   var cleanMap = function(points) {
     handler.removeMarkers();
+    cardsWrapper.html('');
   }
 
   var zoomToPosition = function(position) {
