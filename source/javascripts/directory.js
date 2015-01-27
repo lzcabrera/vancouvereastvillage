@@ -92,7 +92,7 @@
     var cardHeader = $("<div />", {class: "card-header", html: point.name});
     var phone = $("<p />", {html: point.phone});
     var cardCopy = $("<div />", {class: "card-copy", html: point.address}).append(phone);
-    cardImage.append(image);
+
     card.append(cardHeader).append(cardCopy);
     cardsWrapper.append(card);
   }
