@@ -200,3 +200,15 @@ locations:
   lng: -123.0563085
   category:
     name: Drink
+- name: Baaad Anna's
+  address: 2667 East Hastings St.
+  website: https://baaadannas.wordpress.com/
+  phone: 604-255-2577
+  category:
+    name: Shop
+- name: BelAir Realty
+  address: 2621 East Hastings St.
+  website: http://belairrealty.ca
+  phone: 604.255.5898
+  category:
+    name: Services
