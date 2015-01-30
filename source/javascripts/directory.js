@@ -34,14 +34,14 @@
       markerLocations.push(element);
     }
 
-  }
+  };
 
   var setDefaultLocation = function() {
     handler.buildMap(mapOptions, function() {
       handler.map.centerOn(defaultLatLng);
       handler.getMap().setZoom(14);
     });
-  }
+  };
 
   var setZoomBasedOnLatitudePosition = function (latitudePosition) {
     if(latitudePosition != defaultCoord.lat){
@@ -49,14 +49,14 @@
     }else{
       handler.getMap().setZoom(14);
     }
-  }
+  };
 
   var setGeolocation = function(pos) {
     var crd = pos.coords;
     var latlng = new google.maps.LatLng(crd.latitude, crd.longitude);
     handler.map.centerOn(latlng);
     setZoomBasedOnLatitudePosition(handler.getMap().getCenter().k);
-  }
+  };
 
   var bindLiToMarker = function(json_array) {
     _.each(json_array, function(json){
@@ -84,7 +84,7 @@
         handler.getMap().setZoom(20);
       });
     });
-  }
+  };
 
   var createCard = function(point){
 
@@ -95,7 +95,7 @@
 
     card.append(cardHeader).append(cardCopy);
     cardsWrapper.append(card);
-  }
+  };
 
   var drawMap = function(points) {
     var markers = handler.addMarkers(points);
@@ -109,12 +109,12 @@
     handler.bounds.extendWith(markers);
 
     // setZoomBasedOnLatitudePosition(handler.getMap().getCenter().k);
-  }
+  };
 
   var cleanMap = function(points) {
     handler.removeMarkers();
     cardsWrapper.html('');
-  }
+  };
 
   var zoomToPosition = function(position) {
     var marker = handler.addMarker({
@@ -124,7 +124,7 @@
     handler.map.centerOn(marker);
     handler.bounds.extendWith(marker);
     handler.getMap().setZoom(18);
-  }
+  };
 
   var generateCategoriesList = function(element) {
     var link = $("<a />", {html: element.name, href: '#'});
@@ -134,11 +134,11 @@
       filterCategories(element.name);
       $('.js-menu-screen').trigger('click');
     });
-  }
+  };
 
   var generateCategories = function() {
     _.each(categories, generateCategoriesList);
-  }
+  };
 
   var filterCategories = function(categoryFilter){
 
@@ -154,13 +154,13 @@
     handler.map.centerOn(defaultLatLng);
     handler.getMap().setZoom(16);
 
-  }
+  };
 
   var buildMap = function(points) {
     handler.buildMap(mapOptions, function() {
       drawMap(points);
     });
-  }
+  };
 
   mapOptions = JSON.parse(mapOptions);
   locations = JSON.parse(locations);
