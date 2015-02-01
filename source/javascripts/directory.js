@@ -36,6 +36,10 @@
 
   };
 
+  var getCardClass = function(name) {
+    return name.replace(/[^a-z0-9\s]/gi, '').replace(/[_\s]/g, '-');
+  };
+
   var setDefaultLocation = function() {
     handler.buildMap(mapOptions, function() {
       handler.map.centerOn(defaultLatLng);
@@ -88,13 +92,17 @@
 
   var createCard = function(point){
 
+    var cardClass = getCardClass(point.name);
     var card = $("<div />", {class: "card"});
-    var cardHeader = $("<div />", {class: "card-header", html: point.name});
+    var markerLink = $("<a />", {html: point.name, class: cardClass});
+    var cardHeader = $("<div />", {class: "card-header"}).append(markerLink);
     var phone = $("<p />", {html: point.phone});
     var cardCopy = $("<div />", {class: "card-copy", html: point.address}).append(phone);
 
     card.append(cardHeader).append(cardCopy);
     cardsWrapper.append(card);
+
+    //console.log($('.'+cardClass));
   };
 
   var drawMap = function(points) {
@@ -104,6 +112,12 @@
       json.marker = markers[index];
 
       createCard(json);
+
+      var cardClass = getCardClass(json.name);
+      $(document).on('click', '.'+cardClass, function() {
+          console.log(cardClass);
+      });
+
     });
 
     handler.bounds.extendWith(markers);
@@ -160,6 +174,8 @@
     handler.buildMap(mapOptions, function() {
       drawMap(points);
     });
+
+
   };
 
   mapOptions = JSON.parse(mapOptions);
