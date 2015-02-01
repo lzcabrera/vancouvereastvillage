@@ -6,7 +6,7 @@ google_map:
     provider:
       streetViewControl: false
       panControl: false
-      zoomControlOptions: 
+      zoomControlOptions:
       styles:
       - featureType: road
         elementType: geometry
@@ -195,7 +195,7 @@ locations:
   lng: -123.0563085
   category:
     name: Drink
-- name: Baaad Annas
+- name: "Baaad Anna&apos;s"
   address: 2667 East Hastings St.
   website: https://baaadannas.wordpress.com/
   phone: 604-255-2577
