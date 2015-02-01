@@ -6,7 +6,7 @@ google_map:
     provider:
       streetViewControl: false
       panControl: false
-      zoomControlOptions:
+      zoomControlOptions: 
       styles:
       - featureType: road
         elementType: geometry
@@ -195,7 +195,7 @@ locations:
   lng: -123.0563085
   category:
     name: Drink
-- name: "Baaad Anna&apos;s"
+- name: Baaad Anna&apos;s
   address: 2667 East Hastings St.
   website: https://baaadannas.wordpress.com/
   phone: 604-255-2577
@@ -211,3 +211,19 @@ locations:
     name: Services
   lat: 49.2811613
   lng: -123.0513182
+- name: Bmo Bank of Montreal
+  address: 2515 Hastings St
+  website: http://bmo.com
+  phone: "(604) 665-6693"
+  category:
+    name: Services
+  lat: 49.2812344
+  lng: -123.0540882
+- name: Campagnolo Roma
+  address: 2297 E. Hastings St.
+  website: http://www.campagnoloroma.com/
+  phone: "(604) 569-0456"
+  category:
+    name: Eat
+  lat: 49.2811964
+  lng: -123.0579466
