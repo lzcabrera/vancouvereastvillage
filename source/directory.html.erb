@@ -5,9 +5,9 @@ title: Vancouver East Village
 <h1>Vancouver East Village</h1>
 
 <section class="map">
-  <meta name="mapOptions" content='<%= data.directory.google_map.options.to_json %>'>
-  <meta name="locations" content='<%= data.directory.locations.to_json %>'>
-  <meta name="categories" content='<%= data.directory.navigation.categories.to_json %>'>
+  <meta name="mapOptions" content='<%= data.directory.google_map.options.to_json.html_safe %>'>
+  <meta name="locations" content='<%= data.directory.locations.to_json.html_safe %>'>
+  <meta name="categories" content='<%= data.directory.navigation.categories.to_json.html_safe %>'>
 
   <div id="map"></div>
 </section>
