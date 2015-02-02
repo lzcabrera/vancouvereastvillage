@@ -114,8 +114,15 @@
       createCard(json);
 
       var cardClass = getCardClass(json.name);
-      $(document).on('click', '.'+cardClass, function() {
-          console.log(cardClass);
+      $(document).on('click', '.'+cardClass, function(e) {
+          e.preventDefault();
+          handler.getMap().setZoom(14);
+          json.marker.setMap(handler.getMap()); //because clusterer removes map property from marker
+          json.marker.panTo();
+          google.maps.event.trigger(json.marker.getServiceObject(), 'click');
+          $("html, body").animate({
+            scrollTop:0
+          },"slow");
       });
 
     });
