@@ -174,8 +174,6 @@
     handler.buildMap(mapOptions, function() {
       drawMap(points);
     });
-
-
   };
 
   mapOptions = JSON.parse(mapOptions);
