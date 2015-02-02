@@ -6,7 +6,7 @@ google_map:
     provider:
       streetViewControl: false
       panControl: false
-      zoomControlOptions: 
+      zoomControlOptions:
       styles:
       - featureType: road
         elementType: geometry
@@ -303,7 +303,6 @@ locations:
   website: www.mac-tallacycles.com/
   phone: 604-707-0822
   category:
-  - name: Services
   - name: Shop
   lat: 49.2811367
   lng: -123.0512176
@@ -361,7 +360,6 @@ locations:
   phone: 604-253-9411
   category:
   - name: Shop
-  - name: Drink
   lat: 49.2812987
   lng: -123.0586762
 - name: Sena Travel
