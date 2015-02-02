@@ -6,7 +6,7 @@ google_map:
     provider:
       streetViewControl: false
       panControl: false
-      zoomControlOptions: 
+      zoomControlOptions:
       styles:
       - featureType: road
         elementType: geometry
@@ -73,20 +73,10 @@ locations:
     name: Eat
     subcategories:
       name: Dinner
-- name: East Village Bakery
-  address: 2166 East Hastings St.
-  phone: 604-568-5600
-  website: http://www.eastvillagebakery.com/
-  lat: 49.28118320000001
-  lng: -123.0602248
-  category:
-    name: Eat
-    subcategories:
-      name: Gluten-free
 - name: Salteñas
   address: 2261 East Hastings St.
-  phone: 604-253-0004
   website: https://www.facebook.com/saltenas.rocio
+  phone: 604-253-0004
   lat: 49.2812965
   lng: -123.0587826
   category:
@@ -95,8 +85,8 @@ locations:
       name: Lunch
 - name: Italia Bakery
   address: 2828 East Hastings St.
-  phone: 604-251-6800
   website: http://www.italiabakery.ca/
+  phone: 604-251-6800
   lat: 49.2811348
   lng: -123.046537
   category:
@@ -116,18 +106,10 @@ locations:
     name: Shop
 - name: Rio Friendly Meats
   address: 2477 East Hastings St.
-  phone: 604-253-0345
   website: http://riofriendlymeats.webs.com/
+  phone: 604-253-0345
   lat: 49.2811761
   lng: -123.0551177
-  category:
-    name: Shop
-- name: Continental Sausage
-  address: 1927 East Hastings St.
-  phone: 604-255-6922
-  website: http://www.freybe.com/
-  lat: 49.281347
-  lng: -123.064945
   category:
     name: Shop
 - name: Habit Natural Health
@@ -165,16 +147,16 @@ locations:
     name: Drink
 - name: The Brighton
   address: 2471 East Hastings St.
-  phone: 604-428-8822
   website: https://www.facebook.com/BrightonRestaurant
+  phone: 604-428-8822
   lat: 49.2812645
   lng: -123.0551954
   category:
     name: Drink
 - name: Platform 7 Coffee
   address: 2331 East Hastings St.
-  phone: 604-428-1455
   website: http://platform7coffee.com/
+  phone: 604-428-1455
   lat: 49.2811905
   lng: -123.0574196
   category:
@@ -206,24 +188,89 @@ locations:
 - name: BelAir Realty
   address: 2621 East Hastings St.
   website: http://belairrealty.ca
-  phone: 604.255.5898
+  phone: 604-255-5898
   category:
     name: Services
   lat: 49.2811613
   lng: -123.0513182
 - name: Bmo Bank of Montreal
-  address: 2515 Hastings St
+  address: 2515 East Hastings St.
   website: http://bmo.com
-  phone: "(604) 665-6693"
+  phone: 604-665-6693
   category:
     name: Services
   lat: 49.2812344
   lng: -123.0540882
 - name: Campagnolo Roma
-  address: 2297 E. Hastings St.
+  address: 2297 East Hastings St.
   website: http://www.campagnoloroma.com/
-  phone: "(604) 569-0456"
+  phone: 604-569-0456
   category:
     name: Eat
   lat: 49.2811964
   lng: -123.0579466
+- name: CIBC
+  address: 2602 East Hastings St.
+  website: http://cibc.com
+  phone: 604-665-6860
+  category:
+    name: Services
+- name: Continental Sausage
+  address: 1927 East Hastings St.
+  website: http://www.freybe.com/
+  phone: 604-255-6922
+  lat: 49.281347
+  lng: -123.064945
+  category:
+    name: Shop
+- name: Dayton Boots
+  address: 2250 East Hastings St.
+  website: http://www.daytonboots.com/
+  phone:  800-342-8934
+  category:
+    name: Shop
+- name: Docker’s Diner
+  address: 1869 Powell St.
+  phone: 604-254-3732
+  category:
+    name: Eat
+- name: Donald&apos;s Market
+  address: 2342 East Hastings St.
+  website: http://www.donaldsmarket.com/
+  phone: 604-254-3014
+  category:
+    name: Shop
+- name: East Village Bakery
+  address: 2166 East Hastings St.
+  website: http://www.eastvillagebakery.com/
+  phone: 604-568-5600
+  lat: 49.28118320000001
+  lng: -123.0602248
+  category:
+    name: Eat
+    subcategories:
+      name: Gluten-free
+- name: El Pulgarcito
+  address: 2522 East Hastings St.
+  website: https://www.facebook.com/pages/El-Pulgarcito/291423040914481
+  phone: 604-568-8591
+  category:
+    name: Eat
+- name: FrogBox
+  address: 1631 Powell St.
+  website: http://frogbox.com/
+  phone: 877-376-4269
+  category:
+    name: Services
+- name: HSBC Bank Canada
+  address: 2590 East Hastings St.
+  website: http://www.hsbc.ca/
+  phone: 604-253-1531
+  category:
+    name: Services
+- name: JJ Beans Powell
+  address: 1904 Powell St
+  website: http://www.jjbeancoffee.com/
+  phone: 604-254-0169
+  category:
+    name: Drink
