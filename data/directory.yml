@@ -6,7 +6,7 @@ google_map:
     provider:
       streetViewControl: false
       panControl: false
-      zoomControlOptions:
+      zoomControlOptions: 
       styles:
       - featureType: road
         elementType: geometry
@@ -215,6 +215,8 @@ locations:
   phone: 604-665-6860
   category:
     name: Services
+  lat: 49.2810132
+  lng: -123.0517478
 - name: Continental Sausage
   address: 1927 East Hastings St.
   website: http://www.freybe.com/
@@ -226,20 +228,26 @@ locations:
 - name: Dayton Boots
   address: 2250 East Hastings St.
   website: http://www.daytonboots.com/
-  phone:  800-342-8934
+  phone: 800-342-8934
   category:
     name: Shop
+  lat: 49.2811753
+  lng: -123.0587371
 - name: Docker’s Diner
   address: 1869 Powell St.
   phone: 604-254-3732
   category:
     name: Eat
+  lat: 49.2846635
+  lng: -123.0662375
 - name: Donald&apos;s Market
   address: 2342 East Hastings St.
   website: http://www.donaldsmarket.com/
   phone: 604-254-3014
   category:
     name: Shop
+  lat: 49.2810054
+  lng: -123.0571057
 - name: East Village Bakery
   address: 2166 East Hastings St.
   website: http://www.eastvillagebakery.com/
@@ -256,21 +264,29 @@ locations:
   phone: 604-568-8591
   category:
     name: Eat
+  lat: 49.2811473
+  lng: -123.053788
 - name: FrogBox
   address: 1631 Powell St.
   website: http://frogbox.com/
   phone: 877-376-4269
   category:
     name: Services
+  lat: 49.2837129
+  lng: -123.071831
 - name: HSBC Bank Canada
   address: 2590 East Hastings St.
   website: http://www.hsbc.ca/
   phone: 604-253-1531
   category:
     name: Services
+  lat: 49.28114129999999
+  lng: -123.0520715
 - name: JJ Beans Powell
   address: 1904 Powell St
   website: http://www.jjbeancoffee.com/
   phone: 604-254-0169
   category:
     name: Drink
+  lat: 49.2846834
+  lng: -123.0653778
