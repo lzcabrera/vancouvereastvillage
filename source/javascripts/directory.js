@@ -116,7 +116,7 @@
       var cardClass = getCardClass(json.name);
       $(document).on('click', '.'+cardClass, function(e) {
           e.preventDefault();
-          handler.getMap().setZoom(14);
+          handler.getMap().setZoom(18);
           json.marker.setMap(handler.getMap()); //because clusterer removes map property from marker
           json.marker.panTo();
           google.maps.event.trigger(json.marker.getServiceObject(), 'click');
@@ -152,13 +152,26 @@
     var listItem = $("<li />").append(link);
     categoryList.append(listItem);
     link.on('click', function(e){
-      filterCategories(element.name);
+
+      if(element.name == 'All'){
+        showAllCategories();
+      }else {
+        filterCategories(element.name);
+      }
       $('.js-menu-screen').trigger('click');
     });
   };
 
   var generateCategories = function() {
     _.each(categories, generateCategoriesList);
+  };
+
+  var showAllCategories = function() {
+    cleanMap(markerLocations);
+    buildMap(markerLocations);
+
+    handler.map.centerOn(defaultLatLng);
+    handler.getMap().setZoom(18);
   };
 
   var filterCategories = function(categoryFilter){
