@@ -233,7 +233,7 @@ locations:
     name: Shop
   lat: 49.2811753
   lng: -123.0587371
-- name: Docker’s Diner
+- name: Docker&apos;s Diner
   address: 1869 Powell St.
   phone: 604-254-3732
   category:
@@ -298,12 +298,12 @@ locations:
     name: Drink
 - name: Mac-Talla Cycles
   address: 2626 East Hastings St.
-  website: www.mac-tallacycles.com/
+  website: www.mac-tallacycles.com
   phone: 604-707-0822
   lat: 49.2811367
   lng: -123.0512176
   category:
-  - name: Shop
+    name: Shop
 - name: Mis&apos;cel&apos;la&apos;ny Finds
   address: 2615 East Hastings St.
   website: https://www.facebook.com/MiscellanyFinds
@@ -311,7 +311,7 @@ locations:
   lat: 49.28116190000001
   lng: -123.0514162
   category:
-  - name: Shop
+    name: Shop
 - name: Parallel 49 Brewing
   address: 1950 Triumph St.
   website: parallel49brewing.com
@@ -319,7 +319,7 @@ locations:
   lat: 49.2837767
   lng: -123.0643972
   category:
-  - name: Drinks
+    name: Drinks
 - name: Port &amp; Quarter Interiors
   address: 1828 Powell St.
   website: portandquarter.com
@@ -327,7 +327,7 @@ locations:
   lat: 49.28437049999999
   lng: -123.0673899
   category:
-  - name: Services
+    name: Services
 - name: Powell Street Craft Brewery
   address: 1830 Powell St.
   website: www.powellbeer.com
@@ -335,7 +335,7 @@ locations:
   lat: 49.2842238
   lng: -123.068073
   category:
-  - name: Drink
+    name: Drink
 - name: Red Wagon
   address: 2296 East Hastings St.
   website: www.redwagoncafe.com
@@ -343,7 +343,7 @@ locations:
   lat: 49.2812987
   lng: -123.0586762
   category:
-  - name: Eat
+    name: Eat
 - name: Roundel cafe
   address: 2465 East Hastings St.
   website: www.roundelcafe.com
@@ -351,7 +351,7 @@ locations:
   lat: 49.2812987
   lng: -123.0586762
   category:
-  - name: Eat
+    name: Eat
 - name: Schokolade Cafe
   address: 2263 East Hastings St.
   website: www.schokoladecafe.com
@@ -359,7 +359,7 @@ locations:
   lat: 49.2812987
   lng: -123.0586762
   category:
-  - name: Shop
+    name: Shop
 - name: Sena Travel
   address: 2152 East Hastings St.
   website: senatravel.com
@@ -367,7 +367,7 @@ locations:
   lat: 49.2810082
   lng: -123.060611
   category:
-  - name: Services
+    name: Services
 - name: Skye&apos;s Nut Heaven
   address: 2471 East Hastings St.
   website: https://www.facebook.com/pages/Skyes-Nut-Heaven/171590709550600
@@ -375,7 +375,7 @@ locations:
   lat: 49.2812645
   lng: -123.0551954
   category:
-  - name: Shop
+    name: Shop
 - name: Steam Tea House
   address: 2342 East Hastings St.
   website: steamtea.ca
@@ -383,7 +383,7 @@ locations:
   lat: 49.2810054
   lng: -123.0571057
   category:
-  - name: Drink
+    name: Drink
 - name: Storm Brewing
   address: 310 Commercial Drive
   website: www.stormbrewing.org
@@ -391,7 +391,7 @@ locations:
   lat: 49.2820037
   lng: -123.07021
   category:
-  - name: Drink
+    name: Drink
 - name: TD Canada Trust
   address: 2497 East Hastings St.
   website: www.tdcanadatrust.com
@@ -399,7 +399,7 @@ locations:
   lat: 49.2812809
   lng: -123.0548216
   category:
-  - name: Services
+    name: Services
 - name: The Gourmet Warehouse
   address: 1340 East Hastings St.
   website: www.gourmetwarehouse.ca
@@ -407,7 +407,7 @@ locations:
   lat: 49.2811358
   lng: -123.0761545
   category:
-  - name: Shop
+    name: Shop
 - name: Vancity
   address: 2510 East Hastings St.
   website: www.vancity.com
@@ -415,7 +415,7 @@ locations:
   lat: 49.2811496
   lng: -123.054461
   category:
-  - name: Services
+    name: Services
 - name: X-Site Grill &amp; Bistro
   address: 2270 East Hastings St.
   website: x-sitegrillbistro.com
@@ -423,7 +423,7 @@ locations:
   lat: 49.2810272
   lng: -123.0585509
   category:
-  - name: Eat
+    name: Eat
 - name: Dollar Tree
   address: 2205 East Hastings St.
   website: http://www.dollartreecanada.com/
@@ -431,4 +431,4 @@ locations:
   lat: 49.2812028
   lng: -123.0596755
   category:
-  - name: Shop
+    name: Shop
