@@ -19,14 +19,23 @@
     "height": 39
   };
 
+  var addHttp = function(url) {
+    if (!/^(f|ht)tps?:\/\//i.test(url)) {
+      url = "http://" + url;
+    }
+    return url;
+  };
+
   var generateMarkerData = function(element) {
 
     var orgMarkup = "";
 
     orgMarkup += "<h2 class='name'>"+element.name+"</h2>";
     orgMarkup += "<div class='address'>"+element.address+"</div>";
-    orgMarkup += "<div class='view'><a href='"+element.website+"' target='_blank'>Go to website</a></div>";
-
+    if(typeof element.website !== 'undefined' && element.website !== null){
+      var websiteLabel = (element.website.length <= 36)?element.website:'Go to website';
+      orgMarkup += "<div class='view'><a href='"+addHttp(element.website)+"' target='_blank'>"+websiteLabel+"</a></div>";
+    }
     element.infowindow = "<div class='map-marker'>"+orgMarkup+"</div>";
     element.picture = markerIcon;
 
@@ -96,7 +105,7 @@
     var card = $("<div />", {class: "card"});
     var markerLink = $("<a />", {html: point.name, class: cardClass});
     var cardHeader = $("<div />", {class: "card-header"}).append(markerLink);
-    var phone = $("<p />", {html: point.phone});
+    var phone = $("<a />", {html: point.phone, href: 'callto:'+point.phone, class: 'card-phone'});
     var cardCopy = $("<div />", {class: "card-copy", html: point.address}).append(phone);
 
     card.append(cardHeader).append(cardCopy);
@@ -172,8 +181,8 @@
 
     handler.map.centerOn(defaultLatLng);
     handler.getMap().setZoom(16);
-    var span = $('<span/>', {html: ' : All'});
-    $('h1').append(span);
+
+    $('h1 span').html(' : All');
   };
 
   var filterCategories = function(categoryFilter){
@@ -190,13 +199,7 @@
     handler.map.centerOn(defaultLatLng);
     handler.getMap().setZoom(16);
 
-    if($('h1 span')){
-      $('h1 span').html(' : '+categoryFilter);
-    }else{
-      var span = $('<span/>', {html: ' : '+categoryFilter});
-      $('h1').append(span);
-    }
-
+    $('h1 span').html(' : '+categoryFilter);
 
   };
 

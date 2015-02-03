@@ -9,6 +9,9 @@
 @import "partials/nav";
 @import "partials/footer";
 
+$orange: #ffa500;
+$dark-orange: #C4840F;
+
 $sliding-menu-border-color: $dark-gray;
 $sliding-menu-background: lighten($sliding-menu-border-color, 5);
 $sliding-menu-color: #fff;
@@ -40,7 +43,7 @@ $sliding-menu-color-hover: #fff;
   -webkit-overflow-scrolling: touch;
 
   h2 {
-    color: #ffa500;
+    color: $orange;
     font-size: 1.5em;
     padding: 15px 15px 0 15px;
   }
@@ -240,6 +243,11 @@ footer {
         font-weight: normal;
       }
     }
+  }
+
+  .card-phone {
+    display: block;
+    color: $dark-orange;
   }
 
   &:hover {

@@ -6,7 +6,7 @@ google_map:
     provider:
       streetViewControl: false
       panControl: false
-      zoomControlOptions:
+      zoomControlOptions: 
       styles:
       - featureType: road
         elementType: geometry
@@ -278,8 +278,8 @@ locations:
   address: 1631 Powell St.
   website: frogbox.com
   phone: 877-376-4269
-  lat: 49.2811473
-  lng: -123.053788
+  lat: 49.2837129
+  lng: -123.071831
   category:
     name: Services
 - name: HSBC Bank Canada
@@ -350,16 +350,16 @@ locations:
   address: 2296 East Hastings St.
   website: www.redwagoncafe.com
   phone: 604-568-4565
-  lat: 49.2812987
-  lng: -123.0586762
+  lat: 49.28117229999999
+  lng: -123.0579469
   category:
     name: Eat
 - name: Roundel cafe
   address: 2465 East Hastings St.
   website: www.roundelcafe.com
   phone: 604-253-2522
-  lat: 49.2812987
-  lng: -123.0586762
+  lat: 49.281177
+  lng: -123.0553443
   category:
     name: Eat
 - name: Schokolade Cafe
