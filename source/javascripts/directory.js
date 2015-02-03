@@ -172,6 +172,8 @@
 
     handler.map.centerOn(defaultLatLng);
     handler.getMap().setZoom(16);
+    var span = $('<span/>', {html: ' : All'});
+    $('h1').append(span);
   };
 
   var filterCategories = function(categoryFilter){
@@ -187,6 +189,14 @@
 
     handler.map.centerOn(defaultLatLng);
     handler.getMap().setZoom(16);
+
+    if($('h1 span')){
+      $('h1 span').html(' : '+categoryFilter);
+    }else{
+      var span = $('<span/>', {html: ' : '+categoryFilter});
+      $('h1').append(span);
+    }
+
 
   };
 
