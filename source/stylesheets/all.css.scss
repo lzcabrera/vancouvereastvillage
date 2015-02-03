@@ -39,6 +39,12 @@ $sliding-menu-color-hover: #fff;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 
+  h2 {
+    color: #ffa500;
+    font-size: 1.5em;
+    padding: 15px 15px 0 15px;
+  }
+
   li a {
     border-bottom: $sliding-menu-border;
     color: $sliding-menu-color;
@@ -113,6 +119,8 @@ footer {
     margin: 10px auto;
     font-size: 2em;
   }
+}
+@media (max-width: 650px) {
 
 }
 
