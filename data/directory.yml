@@ -68,6 +68,7 @@ locations:
 - name: Scandilicious Dockside
   address: 25 Victoria Drive
   website: www.scandilicious.com
+  phone: 604-877-2277
   lat: 49.2844445
   lng: -123.0655419
   category:
@@ -94,6 +95,8 @@ locations:
     name: Eat
 - name: Coffeecino
   address: 2550 East Hastings St.
+  website: www.coffeecino.ca
+  phone: 604-559-3344
   lat: 49.2811455
   lng: -123.0532587
   category:
@@ -123,6 +126,7 @@ locations:
 - name: Pallet Coffee Roasters
   address: 23 Semlin Drive
   website: www.palletcoffeeroasters.com
+  phone: 604-255-2014
   lat: 49.28469500000001
   lng: -123.0635886
   category:
@@ -130,18 +134,23 @@ locations:
 - name: Jackalopes Neighbourhood Dive
   address: 2257 East Hastings St.
   website: jackalopevancouver.com
+  phone: 604-568-6674
   lat: 49.2812947
   lng: -123.0589523
   category:
     name: Drink
 - name: Basho Cafe and Sweets
   address: 2007 East Hastings St.
+  website: bashocafe.com
+  phone: 604-428-6276
   lat: 49.2813279
   lng: -123.0633789
   category:
     name: Drink
 - name: Renfrew Cafe
   address: 826 Renfrew St.
+  website: www.renfrewcafe.ca
+  phone: 604-563-8523
   lat: 49.2770139
   lng: -123.0438715
   category:

@@ -171,7 +171,7 @@
     buildMap(markerLocations);
 
     handler.map.centerOn(defaultLatLng);
-    handler.getMap().setZoom(18);
+    handler.getMap().setZoom(16);
   };
 
   var filterCategories = function(categoryFilter){
