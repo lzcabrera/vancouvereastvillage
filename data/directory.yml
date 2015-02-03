@@ -29,6 +29,7 @@ google_map:
         - visibility: false
 navigation:
   categories:
+  - name: All
   - name: Eat
     subcategories:
     - name: Bakeries
