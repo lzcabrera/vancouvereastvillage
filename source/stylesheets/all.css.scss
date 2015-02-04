@@ -10,7 +10,7 @@
 @import "partials/footer";
 
 $orange: #ffa500;
-$dark-orange: #C4840F;
+$dark-orange: darken($orange,10%);
 
 $sliding-menu-border-color: $dark-gray;
 $sliding-menu-background: lighten($sliding-menu-border-color, 5);
@@ -105,6 +105,10 @@ h1 {
   left: 0;
   width: 100% !important;
   height: 100% !important;
+}
+
+.gmnoprint img {
+  max-width: none;
 }
 
 .fa {
@@ -248,6 +252,9 @@ footer {
   .card-phone {
     display: block;
     color: $dark-orange;
+    span {
+      color: $orange;
+    }
   }
 
   &:hover {
