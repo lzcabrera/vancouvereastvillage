@@ -6,7 +6,7 @@ google_map:
     provider:
       streetViewControl: false
       panControl: false
-      zoomControlOptions: 
+      zoomControlOptions:
       styles:
       - featureType: road
         elementType: geometry
@@ -466,7 +466,7 @@ locations:
     name: Eat
   lat: 49.28128419999999
   lng: -123.0575022
-- name: Ugo &amp; Joe'apos;s Fine Foods
+- name: Ugo &amp; Joeapos;s Fine Foods
   address: 2406 East Hastings St.
   phone: 604-253-6844
   category:
