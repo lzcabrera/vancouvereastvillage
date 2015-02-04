@@ -6,7 +6,7 @@ google_map:
     provider:
       streetViewControl: false
       panControl: false
-      zoomControlOptions:
+      zoomControlOptions: 
       styles:
       - featureType: road
         elementType: geometry
@@ -448,20 +448,28 @@ locations:
   phone: 604-569-2171
   category:
     name: Shop
+  lat: 49.2811842
+  lng: -123.0603328
 - name: Koto Salon
   address: 2156 East Hastings St.
   website: https://www.facebook.com/kotosalon
   phone: 604-558-0550
   category:
     name: Services
+  lat: 49.28101299999999
+  lng: -123.0604884
 - name: Tacofino Commissary
   address: 2327 East Hastings St.
   website: tacofino.com
   phone: 604-253-8226
   category:
     name: Eat
+  lat: 49.28128419999999
+  lng: -123.0575022
 - name: Ugo &amp; Joe'apos;s Fine Foods
   address: 2406 East Hastings St.
   phone: 604-253-6844
   category:
     name: Shop
+  lat: 49.2811564
+  lng: -123.0562711
