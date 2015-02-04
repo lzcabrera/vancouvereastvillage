@@ -9,7 +9,7 @@
   var markerLocations = [];
   var filteredLocations = [];
   var meetupList = $('.list a');
-  var defaultCoord = {lat: 49.282982, lng: -123.056554};
+  var defaultCoord = {lat: 49.282974, lng: -123.059724};
   var defaultLatLng = new google.maps.LatLng(defaultCoord.lat, defaultCoord.lng);
   var categoryList = $('.js-menu > ul');
   var cardsWrapper = $('.cards');
@@ -105,7 +105,8 @@
     var card = $("<div />", {class: "card"});
     var markerLink = $("<a />", {html: point.name, class: cardClass});
     var cardHeader = $("<div />", {class: "card-header"}).append(markerLink);
-    var phone = $("<a />", {html: point.phone, href: 'callto:'+point.phone, class: 'card-phone'});
+    var phoneIcon = $("<span />", {class: "fa fa-phone-square"});
+    var phone = $("<a />", {html: point.phone, href: 'callto:'+point.phone, class: 'card-phone'}).prepend(phoneIcon);
     var cardCopy = $("<div />", {class: "card-copy", html: point.address}).append(phone);
 
     card.append(cardHeader).append(cardCopy);
