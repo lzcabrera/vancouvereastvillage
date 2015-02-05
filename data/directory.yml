@@ -78,6 +78,8 @@ locations:
 - name: Salteñas
   address: 2261 East Hastings St.
   website: https://www.facebook.com/saltenas.rocio
+  facebook: https://www.facebook.com/saltenas.rocio
+  twitter: rociosaltenas
   phone: 604-253-0004
   lat: 49.2812965
   lng: -123.0587826
@@ -254,6 +256,8 @@ locations:
   address: 2342 East Hastings St.
   website: www.donaldsmarket.com
   phone: 604-254-3014
+  twitter: donaldsmarket
+  facebook: https://www.facebook.com/DonaldsMarket
   category:
     name: Shop
   lat: 49.2810054
@@ -262,6 +266,8 @@ locations:
   address: 2166 East Hastings St.
   website: www.eastvillagebakery.com
   phone: 604-568-5600
+  facebook: https://www.facebook.com/pages/East-Village-Bakery/102184116524288
+  twitter: EastVillageBake
   lat: 49.28118320000001
   lng: -123.0602248
   category:
@@ -326,6 +332,9 @@ locations:
   address: 1950 Triumph St.
   website: parallel49brewing.com
   phone: 604-558-2739
+  twitter: Parallel49Beer
+  facebook: https://www.facebook.com/Parallel49Brewing
+  instagram: http://instagram.com/parallel49beer
   lat: 49.2837767
   lng: -123.0643972
   category:
@@ -350,6 +359,8 @@ locations:
   address: 2296 East Hastings St.
   website: www.redwagoncafe.com
   phone: 604-568-4565
+  twitter: redwagoncafe
+  facebook: https://www.facebook.com/redwagoncafe
   lat: 49.28117229999999
   lng: -123.0579469
   category:
@@ -424,6 +435,9 @@ locations:
   phone: 604-877-7000
   lat: 49.2811496
   lng: -123.054461
+  twitter: Vancity
+  facebook: https://www.facebook.com/Vancity
+  instagram: http://instagram.com/vancitycu
   category:
     name: Services
 - name: X-Site Grill &amp; Bistro
@@ -446,6 +460,9 @@ locations:
   address: 2162 East Hastings St.
   website: tinyfinery.ca
   phone: 604-569-2171
+  twitter: tinyfinery
+  facebook: https://www.facebook.com/TinyFinery
+  instagram: http://instagram.com/tinyfinery/
   category:
     name: Shop
   lat: 49.2811842
@@ -453,6 +470,7 @@ locations:
 - name: Koto Salon
   address: 2156 East Hastings St.
   website: https://www.facebook.com/kotosalon
+  facebook: https://www.facebook.com/kotosalon
   phone: 604-558-0550
   category:
     name: Services
@@ -462,6 +480,9 @@ locations:
   address: 2327 East Hastings St.
   website: tacofino.com
   phone: 604-253-8226
+  facebook: https://www.facebook.com/tacofinocommissary
+  twitter: tacofinoVAN
+  instagram: http://instagram.com/tacofinovancouver
   category:
     name: Eat
   lat: 49.28128419999999
@@ -473,3 +494,17 @@ locations:
     name: Shop
   lat: 49.2811564
   lng: -123.0562711
+- name: Green Room Yoga
+  address: 2645 East Hastings St.
+  website: www.greenroomyoga.ca
+  facebook: https://www.facebook.com/greenroomyogastudio
+  category:
+    name: Services
+  lat: 49.2813509
+  lng: -123.0507721
+- name: Rino&apos;s Italian Shoes
+  address: 2252 East Hastings St.
+  category:
+    name: Services
+  lat: 49.2810312
+  lng: -123.0586676

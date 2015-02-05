@@ -11,7 +11,6 @@
 
 $orange: #ffa500;
 $dark-orange: darken($orange,10%);
-$gray-ec: #6A99DA;
 
 $sliding-menu-border-color: $dark-gray;
 $sliding-menu-background: lighten($sliding-menu-border-color, 5);
@@ -117,7 +116,7 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"] {
 
 .fa {
   margin-right: 10px;
-  color: $gray-ec;
+  color: $medium-gray;
 }
 .map-marker {
   width: 200px;

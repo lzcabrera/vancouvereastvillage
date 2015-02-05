@@ -1,7 +1,29 @@
 (function() {
 
-  var handler = Gmaps.build('Google');
-  // console.dir(handler);
+  var handler = Gmaps.build('Google', {
+                  markers: {
+                    clusterer: {
+                      minimumClusterSize: 4,
+                      enableRetinaIcons: true,
+                      styles: [
+                        {
+                          textSize: 12,
+                          textColor: '#FFF',
+                          url: '/images/directory/map-cluster-1.png',
+                          height: 28,
+                          width: 28
+                        }, {
+                          textSize: 15,
+                          textColor: '#FFF',
+                          url: '/images/directory/map-cluster-2.png',
+                          height: 36,
+                          width: 36
+                        }
+                      ]
+                    }
+                  }
+                });
+
   var mapOptions = $('meta[name=mapOptions]').attr('content');
   var locations = $('meta[name=locations]').attr('content');
   var categories = $('meta[name=categories]').attr('content');
@@ -36,6 +58,22 @@
       var websiteLabel = (element.website.length <= 36)?element.website:'Go to website';
       orgMarkup += "<div class='view'><a href='"+addHttp(element.website)+"' target='_blank'>"+websiteLabel+"</a></div>";
     }
+    if(typeof element.twitter !== 'undefined' && element.twitter !== null){
+      var twitterIcon = $("<a />", {class:"fa fa-twitter-square", href:"http://twitter.com/"+element.twitter});
+      orgMarkup += "<a href='http://twitter.com/"+element.twitter+"' class='fa fa-twitter-square'></a>";
+    }
+
+    if(typeof element.facebook !== 'undefined' && element.facebook !== null){
+      var facebookIcon = $("<a />", {class:"fa fa-facebook-square", href:element.facebook});
+      orgMarkup += "<a href='"+element.facebook+"' class='fa fa-facebook-square'></a>";
+    }
+
+    if(typeof element.instagram !== 'undefined' && element.instagram !== null){
+      var instagramIcon = $("<a />", {class:"fa fa-instagram", href:element.instagram});
+      orgMarkup += "<a href='"+element.instagram+"' class='fa fa-instagram'></a>";
+    }
+
+
     element.infowindow = "<div class='map-marker'>"+orgMarkup+"</div>";
     element.picture = markerIcon;
 
