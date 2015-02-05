@@ -9,13 +9,13 @@
                         {
                           textSize: 12,
                           textColor: '#FFF',
-                          url: '/images/directory/map-cluster-1.png',
+                          url: 'images/directory/map-cluster-1.png',
                           height: 28,
                           width: 28
                         }, {
                           textSize: 15,
                           textColor: '#FFF',
-                          url: '/images/directory/map-cluster-2.png',
+                          url: 'images/directory/map-cluster-2.png',
                           height: 36,
                           width: 36
                         }
