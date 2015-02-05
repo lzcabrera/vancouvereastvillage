@@ -144,9 +144,13 @@
     var markerLink = $("<a />", {html: point.name, class: cardClass});
     var cardHeader = $("<div />", {class: "card-header"}).append(markerLink);
     var phoneIcon = $("<span />", {class: "fa fa-phone"});
-    var phone = $("<a />", {html: point.phone, href: 'callto:'+point.phone, class: 'card-phone'}).prepend(phoneIcon);
     var addressIcon = $("<span />", {class: "fa fa-map-marker"});
-    var cardCopy = $("<div />", {class: "card-copy", html: point.address}).prepend(addressIcon).append(phone);
+    var cardCopy = $("<div />", {class: "card-copy", html: point.address}).prepend(addressIcon);
+
+    if(typeof point.phone !== 'undefined' && point.phone !== null){
+      var phone = $("<a />", {html: point.phone, href: 'callto:'+point.phone, class: 'card-phone'}).prepend(phoneIcon);
+      cardCopy.append(phone)
+    }
 
     card.append(cardHeader).append(cardCopy);
     cardsWrapper.append(card);
