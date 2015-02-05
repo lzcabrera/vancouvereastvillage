@@ -105,9 +105,10 @@
     var card = $("<div />", {class: "card"});
     var markerLink = $("<a />", {html: point.name, class: cardClass});
     var cardHeader = $("<div />", {class: "card-header"}).append(markerLink);
-    var phoneIcon = $("<span />", {class: "fa fa-phone-square"});
+    var phoneIcon = $("<span />", {class: "fa fa-phone"});
     var phone = $("<a />", {html: point.phone, href: 'callto:'+point.phone, class: 'card-phone'}).prepend(phoneIcon);
-    var cardCopy = $("<div />", {class: "card-copy", html: point.address}).append(phone);
+    var addressIcon = $("<span />", {class: "fa fa-map-marker"});
+    var cardCopy = $("<div />", {class: "card-copy", html: point.address}).prepend(addressIcon).append(phone);
 
     card.append(cardHeader).append(cardCopy);
     cardsWrapper.append(card);
