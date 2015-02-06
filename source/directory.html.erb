@@ -13,9 +13,10 @@ title: Vancouver East Village
 </section>
 <div class="cards">
 <% data.directory.locations.each do |location| %>
+<% card_class = location.name.gsub(/[^a-zA-Z 0-9]/, "").gsub(/\s/,'-') %>
     <div class="card">
       <div class="card-header">
-        <a href="">
+        <a href="" class="<%= card_class %>">
           <%= location.name %>
         </a>
       </div>
