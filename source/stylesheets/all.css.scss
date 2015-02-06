@@ -99,6 +99,13 @@ h1 {
   height: 0;
   overflow: hidden;
 }
+
+@media (max-width: 720px) {
+  #map {
+    padding-bottom: 40%;
+  }
+}
+
 #map > div {
   position: absolute;
   top: 0;
