@@ -35,11 +35,13 @@
   var defaultLatLng = new google.maps.LatLng(defaultCoord.lat, defaultCoord.lng);
   var categoryList = $('.js-menu > ul');
   var cardsWrapper = $('.cards');
+  var renderNoCards = false;
   var markerIcon = {
     "url": 'images/directory/map-pin.png',
     "width": 33,
     "height": 39
   };
+  var sortedLocations;
 
   var addHttp = function(url) {
     if (!/^(f|ht)tps?:\/\//i.test(url)) {
@@ -185,6 +187,33 @@
     // setZoomBasedOnLatitudePosition(handler.getMap().getCenter().k);
   };
 
+  var drawMapMarkersOnly = function(points) {
+    var markers = handler.addMarkers(points);
+
+    _.each(points, function(json, index){
+      json.marker = markers[index];
+
+      var cardClass = getCardClass(json.name);
+      console.log(cardClass);
+
+      $(document).on('click', '.'+cardClass, function(e) {
+          e.preventDefault();
+          handler.getMap().setZoom(18);
+          json.marker.setMap(handler.getMap()); //because clusterer removes map property from marker
+          json.marker.panTo();
+          google.maps.event.trigger(json.marker.getServiceObject(), 'click');
+          $("html, body").animate({
+            scrollTop:0
+          },"slow");
+      });
+
+    });
+
+    handler.bounds.extendWith(markers);
+
+    // setZoomBasedOnLatitudePosition(handler.getMap().getCenter().k);
+  };
+
   var cleanMap = function(points) {
     handler.removeMarkers();
     cardsWrapper.html('');
@@ -247,14 +276,20 @@
 
   };
 
-  var buildMap = function(points) {
+  var buildMap = function(points, renderNoCards) {
+
     handler.buildMap(mapOptions, function() {
-      drawMap(points);
+      if(renderNoCards){
+        drawMapMarkersOnly(points);
+      }else {
+        drawMap(points);
+      }
     });
   };
 
   mapOptions = JSON.parse(mapOptions);
   locations = JSON.parse(locations);
+  sortedLocations = _.sortBy(locations, function(o) { return o.name; })
   categories = JSON.parse(categories);
   mapOptions.provider.zoomControlOptions = google.maps.ZoomControlStyle.SMALL;
 
@@ -263,8 +298,8 @@
   navigator.geolocation.getCurrentPosition(setGeolocation);
 
   // map all locations on page load
-  _.each(locations,generateMarkerData);
-  buildMap(markerLocations);
+  _.each(sortedLocations,generateMarkerData);
+  buildMap(markerLocations, true);
 
   google.maps.event.addDomListener(window, "resize", function() {
      var center = handler.getMap().getCenter();

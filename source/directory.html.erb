@@ -11,5 +11,20 @@ title: Vancouver East Village
 
   <div id="map"></div>
 </section>
-
-<div class="cards"></div>
+<div class="cards">
+<% data.directory.locations.each do |location| %>
+    <div class="card">
+      <div class="card-header">
+        <a href="">
+          <%= location.name %>
+        </a>
+      </div>
+      <div class="card-copy">
+        <span class="fa fa-map-marker"></span><%= location.address %>
+        <a class="card-phone" href="tel:<%= location.phone %>">
+          <span class="fa fa-phone"></span><%= location.phone %>
+        </a>
+      </div>
+    </div>
+  <% end %>
+</div>
