@@ -3,7 +3,7 @@
   var handler = Gmaps.build('Google', {
                   markers: {
                     clusterer: {
-                      minimumClusterSize: 4,
+                      minimumClusterSize: 7,
                       enableRetinaIcons: true,
                       styles: [
                         {
