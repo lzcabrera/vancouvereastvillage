@@ -194,7 +194,6 @@
       json.marker = markers[index];
 
       var cardClass = getCardClass(json.name);
-      console.log(cardClass);
 
       $(document).on('click', '.'+cardClass, function(e) {
           e.preventDefault();
