@@ -1,6 +1,8 @@
 //= require vendor/jquery-2.0.3
 //= require underscore
 //= require gmaps/google
+//= require directory
+//= require analytics
 
 $(document).ready(function(){
   $('.js-menu-trigger').on('click touchstart', function(e){
