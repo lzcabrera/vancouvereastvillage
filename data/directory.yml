@@ -191,7 +191,7 @@ locations:
     name: Drink
 - name: Baaad Anna&apos;s
   address: 2667 East Hastings St.
-  website: https://baaadannas.wordpress.com/
+  website: baaadannas.wordpress.com
   phone: 604-255-2577
   category:
     name: Shop
