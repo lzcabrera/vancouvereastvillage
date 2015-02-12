@@ -39,7 +39,7 @@
   var markerIcon = {
     "url": 'images/directory/map-pin.png',
     "width": 33,
-    "height": 39
+    "height": 46
   };
   var sortedLocations;
 
