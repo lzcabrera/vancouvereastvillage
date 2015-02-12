@@ -6,7 +6,7 @@ google_map:
     provider:
       streetViewControl: false
       panControl: false
-      zoomControlOptions:
+      zoomControlOptions: 
       styles:
       - featureType: road
         elementType: geometry
@@ -508,3 +508,39 @@ locations:
     name: Services
   lat: 49.2810312
   lng: -123.0586676
+- name: Peretti Cabinetry
+  address: 2168 East Hastings St.
+  website: www.peretticabinetry.com
+  phone: 604-790-3986
+  category:
+    name: Services
+  lat: 49.2809999
+  lng: -123.0601747
+- name: Mr. Red Cafe
+  address: 2234 East Hastings St.
+  website: https://www.facebook.com/mrredvancity
+  facebook: https://www.facebook.com/mrredvancity
+  phone: 604-710-9515
+  category:
+    name: Eat
+  lat: 49.2810132
+  lng: -123.0591164
+- name: Sweet Tooth Cafe
+  address: 2404 East Hastings St.
+  website: https://www.facebook.com/pages/Sweet-Tooth-Cafe/121343051241836
+  facebook: https://www.facebook.com/pages/Sweet-Tooth-Cafe/121343051241836
+  phone: 604-255-6997
+  category:
+    name: Eat
+  lat: 49.2810006
+  lng: -123.0563166
+- name: Long Live Cats and Dogs
+  address: 2255 East Hastings St.
+  website: http://www.longlivecatsanddogs.com/
+  facebook: https://www.facebook.com/pages/Long-Live-Cats-and-Dogs/108264832629147
+  phone: 604-336-3093
+  category:
+    name: Shop
+  twitter: LLcatsanddogs
+  lat: 49.281294
+  lng: -123.0589734
