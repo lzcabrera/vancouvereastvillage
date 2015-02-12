@@ -57,8 +57,8 @@
     orgMarkup += "<h2 class='name'>"+element.name+"</h2>";
     orgMarkup += "<div class='address'>"+element.address+"</div>";
     if(typeof element.website !== 'undefined' && element.website !== null){
-      var websiteLabel = (element.website.length <= 36)?element.website:'Go to website';
-      orgMarkup += "<div class='view'><a href='"+addHttp(element.website)+"' target='_blank'>"+websiteLabel+"</a></div>";
+      var websiteLabel = (element.website.length <= 33)?element.website:'Go to website';
+      orgMarkup += "<div class='view'><a class='website' href='"+addHttp(element.website)+"' target='_blank'>"+websiteLabel+"</a></div>";
     }
     if(typeof element.twitter !== 'undefined' && element.twitter !== null){
       var twitterIcon = $("<a />", {class:"fa fa-twitter-square", href:"http://twitter.com/"+element.twitter});
@@ -150,7 +150,7 @@
     var cardCopy = $("<div />", {class: "card-copy", html: point.address}).prepend(addressIcon);
 
     if(typeof point.phone !== 'undefined' && point.phone !== null){
-      var phone = $("<a />", {html: point.phone, href: 'callto:'+point.phone, class: 'card-phone'}).prepend(phoneIcon);
+      var phone = $("<a />", {html: point.phone, href: 'tel:'+point.phone, class: 'card-phone'}).prepend(phoneIcon);
       cardCopy.append(phone)
     }
 
@@ -254,7 +254,7 @@
     handler.map.centerOn(defaultLatLng);
     handler.getMap().setZoom(16);
 
-    $('h1 span').html(' : All');
+    $('header h2 span').html(' : All');
   };
 
   var filterCategories = function(categoryFilter){
@@ -271,7 +271,7 @@
     handler.map.centerOn(defaultLatLng);
     handler.getMap().setZoom(16);
 
-    $('h1 span').html(' : '+categoryFilter);
+    $('header h2 span').html(' : '+categoryFilter);
 
   };
 
