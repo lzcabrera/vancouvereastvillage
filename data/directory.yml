@@ -6,7 +6,7 @@ google_map:
     provider:
       streetViewControl: false
       panControl: false
-      zoomControlOptions: 
+      zoomControlOptions:
       styles:
       - featureType: road
         elementType: geometry
@@ -536,7 +536,7 @@ locations:
   lng: -123.0563166
 - name: Long Live Cats and Dogs
   address: 2255 East Hastings St.
-  website: http://www.longlivecatsanddogs.com/
+  website: www.longlivecatsanddogs.com/
   facebook: https://www.facebook.com/pages/Long-Live-Cats-and-Dogs/108264832629147
   phone: 604-336-3093
   category:
