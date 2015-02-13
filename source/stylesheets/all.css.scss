@@ -61,6 +61,14 @@ $sliding-menu-color-hover: #fff;
     }
   }
 
+  ul ul{
+    display: none;
+    a {
+      padding-left:30px
+    }
+  }
+
+
   &.is-visible {
     @include transform(translateX(0));
   }
