@@ -54,6 +54,7 @@ navigation:
     subcategories:
     - name: Realtors
     - name: Agents
+  - name: Bank
 locations:
 - name: Black Rook Bakehouse
   address: 2474 East Hastings St.
@@ -211,6 +212,7 @@ locations:
   phone: 604-665-6693
   category:
     name: Services
+    name: Bank
   lat: 49.2812344
   lng: -123.0540882
 - name: Campagnolo Roma
@@ -227,6 +229,7 @@ locations:
   phone: 604-665-6860
   category:
     name: Services
+    name: Bank
   lat: 49.2810132
   lng: -123.0517478
 - name: Continental Sausage
@@ -296,6 +299,7 @@ locations:
   lng: -123.0520715
   category:
     name: Services
+    name: Bank
 - name: JJ Beans Powell
   address: 1904 Powell St.
   website: www.jjbeancoffee.com
@@ -421,6 +425,7 @@ locations:
   lng: -123.0548216
   category:
     name: Services
+    name: Bank
 - name: The Gourmet Warehouse
   address: 1340 East Hastings St.
   website: www.gourmetwarehouse.ca
@@ -440,6 +445,7 @@ locations:
   instagram: http://instagram.com/vancitycu
   category:
     name: Services
+    name: Bank
 - name: X-Site Grill &amp; Bistro
   address: 2270 East Hastings St.
   website: x-sitegrillbistro.com

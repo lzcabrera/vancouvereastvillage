@@ -257,11 +257,15 @@
     $('header h2 span').html(' : All');
   };
 
+  var belongsToSelectedCategory = function(categoryFilter, category){
+    return categoryFilter==category;
+  }
+
   var filterCategories = function(categoryFilter){
 
     var filteredLocations = _.filter(markerLocations, function(item){
       if ((typeof(item.category) !== 'undefined') && (item.category !== null)) {
-        return item.category.name == categoryFilter;
+        return belongsToSelectedCategory(categoryFilter, item.category.name);
       }
     });
 

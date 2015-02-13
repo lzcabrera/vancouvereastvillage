@@ -15,9 +15,9 @@ title: Vancouver East Village
   <div id="map"></div>
 </section>
 <div class="cards">
-<% sortedLocations = data.directory.locations.sort_by { |k| k["name"] } %>
-<% sortedLocations.each do |location| %>
-<% card_class = location.name.gsub(/[^a-zA-Z 0-9]/, "").gsub(/\s/,'-') %>
+  <% sortedLocations = data.directory.locations.sort_by { |k| k["name"] } %>
+  <% sortedLocations.each do |location| %>
+    <% card_class = location.name.gsub(/[^a-zA-Z 0-9]/, "").gsub(/\s/,'-') %>
     <div class="card">
       <div class="card-header">
         <a href="" class="<%= card_class %>">
