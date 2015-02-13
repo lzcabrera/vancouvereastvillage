@@ -64,7 +64,7 @@ locations:
   lng: -123.0552038
   category:
     name: Eat
-    subcategories:
+    subcategory:
       name: Bakeries
 - name: Scandilicious Dockside
   address: 25 Victoria Drive
@@ -74,7 +74,7 @@ locations:
   lng: -123.0655419
   category:
     name: Eat
-    subcategories:
+    subcategory:
       name: Dinner
 - name: Salteñas
   address: 2261 East Hastings St.
@@ -86,7 +86,7 @@ locations:
   lng: -123.0587826
   category:
     name: Eat
-    subcategories:
+    subcategory:
       name: Lunch
 - name: Italia Bakery
   address: 2828 East Hastings St.
