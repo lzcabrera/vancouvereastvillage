@@ -157,7 +157,6 @@
     card.append(cardHeader).append(cardCopy);
     cardsWrapper.append(card);
 
-    //console.log($('.'+cardClass));
   };
 
   var drawMap = function(points) {
@@ -228,23 +227,51 @@
     handler.getMap().setZoom(18);
   };
 
-  var generateCategoriesList = function(element) {
-    var link = $("<a />", {html: element.name, href: '#'});
-    var listItem = $("<li />").append(link);
-    categoryList.append(listItem);
-    link.on('click', function(e){
+  var bindCategories = function() {
+    var categories = $("ul.categories li a");
 
-      if(element.name == 'All'){
-        showAllCategories();
-      }else {
-        filterCategories(element.name);
-      }
-      $('.js-menu-screen').trigger('click');
-    });
+      _.each(categories, function(category){
+        $(category).on("click", function(e) {
+          var currentCategory = $(this);
+          var name = currentCategory.attr("href");
+          var subCategoriesUl = currentCategory.next();
+          var subcategories = subCategoriesUl.find('li a');
+          var allSubCategories = $("ul.subcategories");
+
+          e.preventDefault();
+
+          if(name == 'All'){
+            showAllCategories();
+            allSubCategories.removeClass("show-element");
+            $('.js-menu-screen').trigger('click');
+          }else {
+            filterCategories(name);
+            if(subcategories.length > 0){
+              allSubCategories.removeClass("show-element");
+              subCategoriesUl.addClass("show-element");
+            }else{
+              $('.js-menu-screen').trigger('click');
+            }
+          }
+
+        });
+      });
   };
 
-  var generateCategories = function() {
-    _.each(categories, generateCategoriesList);
+  var bindSubCategories = function() {
+    var subcategories = $("ul.subcategories li a");
+    _.each(subcategories, function(subcategory){
+      $(subcategory).on("click", function(e) {
+        var currentSubCategory = $(this);
+        var name = currentSubCategory.attr("href");
+
+        e.preventDefault();
+        filterSubCategories(name);
+
+        $('.js-menu-screen').trigger('click');
+
+      });
+    });
   };
 
   var showAllCategories = function() {
@@ -279,6 +306,29 @@
 
   };
 
+
+  var filterSubCategories = function(subCategoryFilter){
+
+    var filteredLocations = _.filter(markerLocations, function(item){
+      var subCategoriesArray = [];
+      if ((typeof(item.category.subcategory) !== 'undefined') && (item.category.subcategory !== null)) {
+        _.each(item.category.subcategory, function(object){
+          subCategoriesArray.push(object.name);
+        });
+        return _.include(subCategoriesArray, subCategoryFilter);
+      }
+    });
+
+    cleanMap(markerLocations);
+    buildMap(filteredLocations);
+
+    handler.map.centerOn(defaultLatLng);
+    handler.getMap().setZoom(16);
+
+    $('header h2 span').html(' : '+subCategoryFilter);
+
+  };
+
   var buildMap = function(points, renderNoCards) {
 
     handler.buildMap(mapOptions, function() {
@@ -310,7 +360,7 @@
      handler.getMap().setCenter(center);
   });
 
-  generateCategories();
-
+  bindCategories();
+  bindSubCategories();
 
 })();

@@ -36,25 +36,27 @@ navigation:
     - name: Delis
     - name: Restaurants
     - name: Brunch
-    - name: Dinner
     - name: Gluten-free
     - name: Sandwiches
   - name: Drink
     subcategories:
     - name: Bars
     - name: Breweries
-    - name: Cafe
+    - name: Cafes
     - name: Tea Shops
   - name: Shop
     subcategories:
     - name: Artisan
-    - name: Antiques
     - name: Art
+    - name: Italian
   - name: Services
     subcategories:
-    - name: Realtors
-    - name: Agents
-  - name: Bank
+    - name: Real Estate
+    - name: Salons
+    - name: Banks
+    - name: Yoga Studios
+    - name: Moving
+    - name: Travel
 locations:
 - name: Black Rook Bakehouse
   address: 2474 East Hastings St.
@@ -65,7 +67,7 @@ locations:
   category:
     name: Eat
     subcategory:
-      name: Bakeries
+      - name: Bakeries
 - name: Scandilicious Dockside
   address: 25 Victoria Drive
   website: www.scandilicious.com
@@ -75,7 +77,9 @@ locations:
   category:
     name: Eat
     subcategory:
-      name: Dinner
+      - name: Restaurants
+      - name: Bakeries
+      - name: Cafe
 - name: Salteñas
   address: 2261 East Hastings St.
   website: https://www.facebook.com/saltenas.rocio
@@ -87,7 +91,10 @@ locations:
   category:
     name: Eat
     subcategory:
-      name: Lunch
+      - name: Lunch
+      - name: Bakeries
+      - name: Cafes
+      - name: Sandwiches
 - name: Italia Bakery
   address: 2828 East Hastings St.
   website: www.italiabakery.ca
@@ -96,6 +103,8 @@ locations:
   lng: -123.046537
   category:
     name: Eat
+    subcategory:
+      - name: Bakeries
 - name: Coffeecino
   address: 2550 East Hastings St.
   website: www.coffeecino.ca
@@ -104,6 +113,8 @@ locations:
   lng: -123.0532587
   category:
     name: Drink
+    subcategory:
+      - name: Cafes
 - name: Bianca Maria Italian Fine Foods
   address: 2469 East Hastings St.
   phone: 604-253-9626
@@ -111,6 +122,8 @@ locations:
   lng: -123.0552455
   category:
     name: Shop
+    subcategory:
+      - name: Italian
 - name: Rio Friendly Meats
   address: 2477 East Hastings St.
   website: riofriendlymeats.webs.com
@@ -119,6 +132,8 @@ locations:
   lng: -123.0551177
   category:
     name: Shop
+    subcategory:
+      - name: Meats
 - name: Habit Natural Health
   address: 2307 East Hastings St.
   phone: 604-563-8822
@@ -134,6 +149,8 @@ locations:
   lng: -123.0635886
   category:
     name: Drink
+    subcategory:
+      - name: Cafes
 - name: Jackalopes Neighbourhood Dive
   address: 2257 East Hastings St.
   website: jackalopevancouver.com
@@ -142,6 +159,8 @@ locations:
   lng: -123.0589523
   category:
     name: Drink
+    subcategory:
+      - name: Bars
 - name: Basho Cafe and Sweets
   address: 2007 East Hastings St.
   website: bashocafe.com
@@ -150,6 +169,10 @@ locations:
   lng: -123.0633789
   category:
     name: Drink
+    subcategory:
+      - name: Cafes
+      - name: Lunch
+      - name: Bakeries
 - name: Renfrew Cafe
   address: 826 Renfrew St.
   website: www.renfrewcafe.ca
@@ -158,6 +181,8 @@ locations:
   lng: -123.0438715
   category:
     name: Drink
+    subcategory:
+      - name: Cafe
 - name: The Brighton
   address: 2471 East Hastings St.
   website: https://www.facebook.com/BrightonRestaurant
@@ -166,6 +191,8 @@ locations:
   lng: -123.0551954
   category:
     name: Drink
+    subcategory:
+      - name: Bars
 - name: Platform 7 Coffee
   address: 2331 East Hastings St.
   website: platform7coffee.com/
@@ -174,6 +201,8 @@ locations:
   lng: -123.0574196
   category:
     name: Drink
+    subcategory:
+      - name: Cafes
 - name: Odd Society Spirits
   address: 1725 Powell St.
   phone: 604-716-6745
@@ -182,6 +211,8 @@ locations:
   lng: -123.0696796
   category:
     name: Drink
+    subcategory:
+      - name: Bars
 - name: East Cafe
   address: 2401 East Hastings St.
   website: www.eastcafe.ca
@@ -190,6 +221,8 @@ locations:
   lng: -123.0563085
   category:
     name: Drink
+    subcategory:
+      - name: Cafes
 - name: Baaad Anna&apos;s
   address: 2667 East Hastings St.
   website: baaadannas.wordpress.com
@@ -204,6 +237,8 @@ locations:
   phone: 604-255-5898
   category:
     name: Services
+    subcategory:
+      - name: Real Estate
   lat: 49.2811613
   lng: -123.0513182
 - name: Bmo Bank of Montreal
@@ -212,7 +247,8 @@ locations:
   phone: 604-665-6693
   category:
     name: Services
-    name: Bank
+    subcategory:
+      - name: Banks
   lat: 49.2812344
   lng: -123.0540882
 - name: Campagnolo Roma
@@ -221,6 +257,8 @@ locations:
   phone: 604-569-0456
   category:
     name: Eat
+    subcategory:
+      - name: Restaurants
   lat: 49.2811964
   lng: -123.0579466
 - name: CIBC
@@ -229,7 +267,8 @@ locations:
   phone: 604-665-6860
   category:
     name: Services
-    name: Bank
+    subcategory:
+      - name: Banks
   lat: 49.2810132
   lng: -123.0517478
 - name: Continental Sausage
@@ -240,12 +279,16 @@ locations:
   lng: -123.064945
   category:
     name: Shop
+    subcategory:
+      - name: Delis
 - name: Dayton Boots
   address: 2250 East Hastings St.
   website: www.daytonboots.com
   phone: 800-342-8934
   category:
     name: Shop
+    subcategory:
+      - name: Shoes
   lat: 49.2811753
   lng: -123.0587371
 - name: Docker&apos;s Diner
@@ -253,6 +296,8 @@ locations:
   phone: 604-254-3732
   category:
     name: Eat
+    subcategory:
+      - name: Restaurants
   lat: 49.2846635
   lng: -123.0662375
 - name: Donald&apos;s Market
@@ -263,6 +308,8 @@ locations:
   facebook: https://www.facebook.com/DonaldsMarket
   category:
     name: Shop
+    subcategory:
+      - name: Groceries
   lat: 49.2810054
   lng: -123.0571057
 - name: East Village Bakery
@@ -275,6 +322,9 @@ locations:
   lng: -123.0602248
   category:
     name: Eat
+    subcategory:
+      - name: Bakeries
+      - name: Gluten-free
 - name: El Pulgarcito
   address: 2522 East Hastings St.
   website: https://www.facebook.com/pages/El-Pulgarcito/291423040914481
@@ -283,6 +333,8 @@ locations:
   lng: -123.053788
   category:
     name: Eat
+    subcategory:
+      - name: Restaurants
 - name: FrogBox
   address: 1631 Powell St.
   website: frogbox.com
@@ -291,6 +343,8 @@ locations:
   lng: -123.071831
   category:
     name: Services
+    subcategory:
+      - name: Moving
 - name: HSBC Bank Canada
   address: 2590 East Hastings St.
   website: www.hsbc.ca
@@ -299,7 +353,8 @@ locations:
   lng: -123.0520715
   category:
     name: Services
-    name: Bank
+    subcategory:
+      - name: Banks
 - name: JJ Beans Powell
   address: 1904 Powell St.
   website: www.jjbeancoffee.com
@@ -308,6 +363,8 @@ locations:
   lng: -123.0653778
   category:
     name: Drink
+    subcategory:
+      - name: Cafes
 - name: Laughing Bean Coffee Co.
   address: 2695 East Hastings St.
   website: www.laughingbeancoffee.com
@@ -316,6 +373,8 @@ locations:
   lng: -123.0495681
   category:
     name: Drink
+    subcategory:
+      - name: Cafes
 - name: Mac-Talla Cycles
   address: 2626 East Hastings St.
   website: www.mac-tallacycles.com
@@ -324,6 +383,8 @@ locations:
   lng: -123.0512176
   category:
     name: Shop
+    subcategory:
+      - name: Bikes
 - name: Mis&apos;cel&apos;la&apos;ny Finds
   address: 2615 East Hastings St.
   website: https://www.facebook.com/MiscellanyFinds
@@ -343,6 +404,8 @@ locations:
   lng: -123.0643972
   category:
     name: Drink
+    subcategory:
+      - name: Breweries
 - name: Port &amp; Quarter Interiors
   address: 1828 Powell St.
   website: portandquarter.com
@@ -351,6 +414,8 @@ locations:
   lng: -123.0673899
   category:
     name: Services
+    subcategory:
+      - name: Interior Design
 - name: Powell Street Craft Brewery
   address: 1830 Powell St.
   website: www.powellbeer.com
@@ -359,6 +424,8 @@ locations:
   lng: -123.068073
   category:
     name: Drink
+    subcategory:
+      - name: Breweries
 - name: Red Wagon
   address: 2296 East Hastings St.
   website: www.redwagoncafe.com
@@ -369,6 +436,9 @@ locations:
   lng: -123.0579469
   category:
     name: Eat
+    subcategory:
+     - name: Restaurants
+     - name: Brunch
 - name: Roundel cafe
   address: 2465 East Hastings St.
   website: www.roundelcafe.com
@@ -377,6 +447,9 @@ locations:
   lng: -123.0553443
   category:
     name: Eat
+    subcategory:
+      - name: Restaurants
+      - name: Brunch
 - name: Schokolade Cafe
   address: 2263 East Hastings St.
   website: www.schokoladecafe.com
@@ -385,6 +458,8 @@ locations:
   lng: -123.0586762
   category:
     name: Shop
+    subcategory:
+      - name: Cafes
 - name: Sena Travel
   address: 2152 East Hastings St.
   website: senatravel.com
@@ -393,6 +468,8 @@ locations:
   lng: -123.060611
   category:
     name: Services
+    subcategory:
+      - name: Travel
 - name: Skye&apos;s Nut Heaven
   address: 2471 East Hastings St.
   website: https://www.facebook.com/pages/Skyes-Nut-Heaven/171590709550600
@@ -409,6 +486,8 @@ locations:
   lng: -123.0571057
   category:
     name: Drink
+    subcategory:
+      - name: Tea Shops
 - name: Storm Brewing
   address: 310 Commercial Drive
   website: www.stormbrewing.org
@@ -417,6 +496,8 @@ locations:
   lng: -123.07021
   category:
     name: Drink
+    subcategory:
+      - name: Breweries
 - name: TD Canada Trust
   address: 2497 East Hastings St.
   website: www.tdcanadatrust.com
@@ -425,7 +506,8 @@ locations:
   lng: -123.0548216
   category:
     name: Services
-    name: Bank
+    subcategory:
+      - name: Banks
 - name: The Gourmet Warehouse
   address: 1340 East Hastings St.
   website: www.gourmetwarehouse.ca
@@ -434,6 +516,8 @@ locations:
   lng: -123.0761545
   category:
     name: Shop
+    subcategory:
+      - name: Kitchen
 - name: Vancity
   address: 2510 East Hastings St.
   website: www.vancity.com
@@ -445,7 +529,8 @@ locations:
   instagram: http://instagram.com/vancitycu
   category:
     name: Services
-    name: Bank
+    subcategory:
+      - name: Banks
 - name: X-Site Grill &amp; Bistro
   address: 2270 East Hastings St.
   website: x-sitegrillbistro.com
@@ -454,6 +539,9 @@ locations:
   lng: -123.0585509
   category:
     name: Eat
+    subcategory:
+      - name: Restaurants
+      - name: Bars
 - name: Dollar Tree
   address: 2205 East Hastings St.
   website: http://www.dollartreecanada.com/
@@ -471,6 +559,9 @@ locations:
   instagram: http://instagram.com/tinyfinery/
   category:
     name: Shop
+    subcategory:
+      - name: Artisan
+      - name: Art
   lat: 49.2811842
   lng: -123.0603328
 - name: Koto Salon
@@ -480,6 +571,8 @@ locations:
   phone: 604-558-0550
   category:
     name: Services
+    subcategory:
+      - name: Salons
   lat: 49.28101299999999
   lng: -123.0604884
 - name: Tacofino Commissary
@@ -491,6 +584,9 @@ locations:
   instagram: http://instagram.com/tacofinovancouver
   category:
     name: Eat
+    subcategory:
+      - name: Restaurants
+      - name: Bars
   lat: 49.28128419999999
   lng: -123.0575022
 - name: Ugo &amp; Joe&apos;s Fine Foods
@@ -498,6 +594,9 @@ locations:
   phone: 604-253-6844
   category:
     name: Shop
+    subcategory:
+      - name: Italian
+      - name: Delis
   lat: 49.2811564
   lng: -123.0562711
 - name: Green Room Yoga
@@ -506,12 +605,16 @@ locations:
   facebook: https://www.facebook.com/greenroomyogastudio
   category:
     name: Services
+    subcategory:
+      - name: Yoga Studios
   lat: 49.2813509
   lng: -123.0507721
 - name: Rino&apos;s Italian Shoes
   address: 2252 East Hastings St.
   category:
     name: Services
+    subcategory:
+      - name: Shoes
   lat: 49.2810312
   lng: -123.0586676
 - name: Peretti Cabinetry
@@ -529,6 +632,8 @@ locations:
   phone: 604-710-9515
   category:
     name: Eat
+    subcategory:
+      - name: Restaurants
   lat: 49.2810132
   lng: -123.0591164
 - name: Sweet Tooth Cafe
@@ -538,6 +643,8 @@ locations:
   phone: 604-255-6997
   category:
     name: Eat
+    subcategory:
+      - name: Cafes
   lat: 49.2810006
   lng: -123.0563166
 - name: Long Live Cats and Dogs
@@ -547,6 +654,8 @@ locations:
   phone: 604-336-3093
   category:
     name: Shop
+    subcategory:
+      - name: Pet Stores
   twitter: LLcatsanddogs
   lat: 49.281294
   lng: -123.0589734

@@ -24,7 +24,19 @@
 
     <nav class="js-menu sliding-menu-content">
       <h2>Categories</h2>
-      <ul></ul>
+      <ul class="categories">
+        <% data.directory.navigation.categories.each do |category| %>
+          <li><a href="<%= category.name %>" data="<%= category.name.downcase %>"><%= category.name %></a>
+            <% unless category.subcategories.nil? %>
+              <ul class="subcategories">
+                <% category.subcategories.each do |subcategory| %>
+                  <li><a href="<%= subcategory.name %>"><%= subcategory.name %></a></li>
+                <% end %>
+              </ul>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
     </nav>
 
     <div class="js-menu-screen menu-screen"></div>

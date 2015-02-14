@@ -24,7 +24,8 @@ $sliding-menu-color-hover: #fff;
   cursor: pointer;
   font-size: $base-font-size;
   margin-bottom: $base-line-height;
-  position: relative;
+  position: fixed;
+  z-index: 100;
   outline: none;
 
   img {
@@ -32,7 +33,12 @@ $sliding-menu-color-hover: #fff;
   }
 }
 
+.subcategories.show-element {
+  display: block;
+}
+
 .sliding-menu-content {
+  opacity: 0.9;
   @include position(fixed, 0px auto 0px 0px);
   @include size(220px 100%);
   @include transform(translateX(-220px));
@@ -59,10 +65,22 @@ $sliding-menu-color-hover: #fff;
       background-color: $sliding-menu-background-hover;
       color: $sliding-menu-color-hover;
     }
+
+  }
+
+  li li a {
+
+    &:hover {
+      background-color: $dark-orange;
+      color: $sliding-menu-color-hover;
+    }
+
   }
 
   ul ul{
     display: none;
+    list-style: circle inside;
+    color: #fff;
     a {
       padding-left:30px
     }
@@ -88,10 +106,6 @@ $sliding-menu-color-hover: #fff;
   }
 }
 
-.sliding-menu-button {
-    position: absolute;
-}
-
 header{
   text-align: center;
   h1 {
@@ -111,6 +125,8 @@ header{
 
 
 #map {
+  width: 90%;
+  margin: 0 auto;
   position: relative;
   padding-bottom: 30%;
   height: 0;
@@ -164,6 +180,15 @@ img[src*="gstatic.com/"], img[src*="googleapis.com/"] {
 
   .fa {
     font-size: 1.75em;
+  }
+  .fa-twitter-square {
+    color: #55acee;
+  }
+  .fa-facebook-square {
+    color: #3b5998;
+  }
+  .fa-instagram {
+    color: #000;
   }
 }
 
