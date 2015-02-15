@@ -41,13 +41,19 @@
 
     <div class="js-menu-screen menu-screen"></div>
 
-    <%= yield %>
+    <div class="sliding-content js-main-push">
 
-    <footer>
-      Created by <a href="http://www.funnelcity.com"> funnelcity</a> &copy; <%= Date.today.strftime("%Y") %>
-    </footer>
 
-    <div id="main" role="main"></div>
+
+      <%= yield %>
+
+      <footer>
+        Created by <a href="http://www.funnelcity.com"> funnelcity</a> &copy; <%= Date.today.strftime("%Y") %>
+      </footer>
+
+      <div id="main" role="main"></div>
+
+    </div>
 
     <%= javascript_include_tag  "map" %>
     <%= javascript_include_tag  "all" %>
