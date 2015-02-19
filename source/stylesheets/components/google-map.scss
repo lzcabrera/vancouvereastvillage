@@ -1,0 +1,64 @@
+
+#map {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 30%;
+  height: 0;
+  overflow: hidden;
+}
+
+@media (max-width: 720px) {
+  #map {
+    padding-bottom: 75%;
+  }
+}
+
+#map > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.gmnoprint img {
+  max-width: none;
+}
+img[src*="gstatic.com/"], img[src*="googleapis.com/"] {
+  max-width: none;
+}
+
+.map-marker {
+  width: 235px;
+  padding: 10px;
+  h2 {
+    font-size: 1.25em;
+    color: $base-accent-color;
+  }
+  a {
+    color: $dark-orange;
+  }
+  a.website {
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 2em;
+
+    &:after{
+      content: " \00BB";
+    }
+  }
+
+  .fa {
+    font-size: 1.75em;
+  }
+  .fa-twitter-square {
+    color: #55acee;
+  }
+  .fa-facebook-square {
+    color: #3b5998;
+  }
+  .fa-instagram {
+    color: #000;
+  }
+}

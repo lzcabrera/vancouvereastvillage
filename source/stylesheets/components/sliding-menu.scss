@@ -1,0 +1,96 @@
+.sliding-menu-button {
+  display: inline-block;
+  cursor: pointer;
+  font-size: $base-font-size;
+  margin-bottom: $base-line-height;
+  position: fixed;
+  z-index: 100;
+  outline: none;
+
+  img {
+    height: 1.3em;
+  }
+}
+
+.sliding-menu-content {
+  @include position(fixed, 0px auto 0px 0px);
+  @include size(220px 100%);
+  @include transform(translateX(-220px));
+  @include transition(all .25s linear);
+  background: $sliding-menu-background;
+  z-index: 999999;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+
+  h2 {
+    color: $orange;
+    font-size: 1.5em;
+    padding: 15px 15px 0 15px;
+  }
+
+  li a {
+    border-bottom: $sliding-menu-border;
+    color: $sliding-menu-color;
+    display: block;
+    font-weight: bold;
+    padding: 1em;
+
+    &:hover {
+      background-color: $sliding-menu-background-hover;
+      color: $sliding-menu-color-hover;
+    }
+
+  }
+
+  li li a {
+
+    &:hover {
+      background-color: $dark-orange;
+      color: $sliding-menu-color-hover;
+    }
+
+  }
+
+  ul ul{
+    display: none;
+    list-style: circle inside;
+    color: #fff;
+    a {
+      padding-left:30px
+    }
+  }
+
+
+  &.is-visible {
+    @include transform(translateX(0));
+  }
+}
+
+.sliding-content {
+  @include position(relative, 0px 0px 0px 0px);
+  // @include size(220px 100%);
+  @include transform(translateX(0));
+  @include transition(all .25s linear);
+
+  &.menu-is-visible {
+    @include transform(translateX(220px));
+  }
+}
+
+.menu-screen {
+  @include position(fixed, 0px 0px 0px 0px);
+  @include transition;
+  background: $sliding-menu-border-color;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999998;
+
+  &.is-visible {
+    opacity: .2;
+    visibility: visible;
+  }
+}
+
+.subcategories.show-element {
+  display: block;
+}
