@@ -93,6 +93,7 @@
     handler.buildMap(mapOptions, function() {
       handler.map.centerOn(defaultLatLng);
       handler.getMap().setZoom(14);
+      handler.fitMapToBounds();
     });
   };
 
@@ -337,6 +338,7 @@
       }else {
         drawMap(points);
       }
+      handler.fitMapToBounds();
     });
   };
 
