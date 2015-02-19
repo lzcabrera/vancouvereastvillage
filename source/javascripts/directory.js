@@ -269,8 +269,6 @@
         e.preventDefault();
         filterSubCategories(name);
 
-        $('.js-menu-screen').trigger('click');
-
       });
     });
   };
