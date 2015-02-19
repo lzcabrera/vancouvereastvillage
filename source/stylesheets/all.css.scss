@@ -19,6 +19,10 @@ $sliding-menu-border: 1px solid $sliding-menu-border-color;
 $sliding-menu-background-hover: $base-accent-color;
 $sliding-menu-color-hover: #fff;
 
+body{
+  overflow: hidden;
+}
+
 .sliding-menu-button {
   display: inline-block;
   cursor: pointer;
