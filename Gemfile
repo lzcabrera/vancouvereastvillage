@@ -19,6 +19,7 @@ gem "underscore-rails"
 gem "rake"
 gem "gmaps4rails"
 gem "geocoder"
+gem "faraday"
 
 gem 'bitters'
 gem 'bourbon'
