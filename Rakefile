@@ -20,7 +20,7 @@ def geocode_address(update_all)
 end
 
 def instagram_photos
-  data_path = 'instagram.json'
+  data_path = 'instagram.yml'
 
   if ENV["INSTAGRAM_API_KEY"].nil?
     puts "Set ENV['INSTAGRAM_API_KEY'] to connect to the instagram.com API"
